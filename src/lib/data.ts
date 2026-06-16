@@ -1,4 +1,4 @@
-import type { Product, Campaign } from "@/types/product";
+import type { Product, Campaign, Look } from "@/types/product";
 
 // Imagens dos produtos reais
 // Salve cada arquivo em: public/products/<nome-abaixo>.jpg
@@ -255,33 +255,19 @@ export const products: Product[] = [
   },
 ];
 
-// Campanha especial — Kit Dia dos Namorados
 export const campaigns: Campaign[] = [
-  {
-    id: "c1",
-    title: "Kit Dia dos Namorados",
-    subtitle: "Campanha Especial",
-    description:
-      "Surpreenda quem você ama com um kit completo Ogochi. Boné, Carteira e Sandália — o presente perfeito para quem tem estilo.",
-    image: `${P}/kit-namorados.jpg`,
-    cta: "Ver Kit",
-    ctaHref: "/bolsas-acessorios",
-    season: "Especial",
-    year: 2025,
-    featured: true,
-  },
   {
     id: "c2",
     title: "Verão com Estilo",
     subtitle: "Coleção Feminina",
     description:
       "O look de praia perfeito chegou. Maiô e saída longa Sauê — sofisticação do mar à areia.",
-    image: `${P}/maio-saida-saue.jpg`,
+    image: `${P}/maio-saida-saue.png`,
     cta: "Ver Coleção",
     ctaHref: "/moda-feminina",
     season: "Verão",
     year: 2025,
-    featured: false,
+    featured: true,
   },
   {
     id: "c3",
@@ -297,6 +283,34 @@ export const campaigns: Campaign[] = [
     featured: false,
   },
 ];
+
+export const looks: Look[] = [
+  {
+    id: "l1",
+    name: "Look Praia Feminino",
+    description: "Maiô + saída longa — o look completo para arrasar na praia com elegância.",
+    image: `${P}/maio-saida-saue.png`,
+    productIds: ["f1", "f2"],
+  },
+  {
+    id: "l2",
+    name: "Look Masculino Casual",
+    description: "Camisa + boné + chinelo — conforto e estilo para o dia a dia.",
+    image: `${P}/look-masculino-verde.webp`,
+    productIds: ["m1", "a1", "a4"],
+  },
+  {
+    id: "l3",
+    name: "Kit Acessórios Ogochi",
+    description: "Boné + cinto + carteira — os três itens que elevam qualquer look masculino.",
+    image: `${P}/bone-cinto-carteira.webp`,
+    productIds: ["a1", "a2", "a3"],
+  },
+];
+
+export function getLookProducts(look: Look) {
+  return look.productIds.map((id) => products.find((p) => p.id === id)!).filter(Boolean);
+}
 
 export function getProductsByGender(gender: "feminino" | "masculino") {
   return products.filter(

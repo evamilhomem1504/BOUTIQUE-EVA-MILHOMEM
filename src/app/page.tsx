@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star, Shield, Sparkles } from "lucide-react";
 import { ProductCard } from "@/components/shared/ProductCard";
+import { ShopTheLook } from "@/components/shared/ShopTheLook";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
-import { getFeaturedProducts, campaigns } from "@/lib/data";
+import { getFeaturedProducts, campaigns, looks, getLookProducts } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
 const BASE = "https://images.unsplash.com";
@@ -171,6 +172,27 @@ export default function HomePage() {
             {featured.map((product, i) => (
               <AnimatedSection key={product.id} delay={i * 0.06}>
                 <ProductCard product={product} />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MONTE O LOOK ─────────────────────────────────────────── */}
+      <section className="section-padding bg-off-white">
+        <div className="container-boutique">
+          <AnimatedSection>
+            <SectionHeader
+              eyebrow="Shop the Look"
+              title="Monte o look completo"
+              subtitle="Escolha um look, clique em 'Quero este look' e fale direto com a gente pelo WhatsApp."
+            />
+          </AnimatedSection>
+
+          <div className="mt-14 space-y-8">
+            {looks.map((look, i) => (
+              <AnimatedSection key={look.id} delay={i * 0.1}>
+                <ShopTheLook look={look} products={getLookProducts(look)} />
               </AnimatedSection>
             ))}
           </div>

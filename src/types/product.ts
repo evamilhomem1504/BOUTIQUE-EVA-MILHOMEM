@@ -35,6 +35,14 @@ export interface Product {
   tags: string[];
 }
 
+export interface Look {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  productIds: string[];
+}
+
 export interface Campaign {
   id: string;
   title: string;
