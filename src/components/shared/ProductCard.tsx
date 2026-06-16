@@ -88,12 +88,20 @@ export function ProductCard({ product, className }: ProductCardProps) {
           {product.name}
         </Link>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold text-noir">
-            {formatPrice(product.price)}
-          </span>
-          {product.originalPrice && (
-            <span className="text-xs text-muted-foreground line-through">
-              {formatPrice(product.originalPrice)}
+          {product.price > 0 ? (
+            <>
+              <span className="text-sm font-semibold text-noir">
+                {formatPrice(product.price)}
+              </span>
+              {product.originalPrice && (
+                <span className="text-xs text-muted-foreground line-through">
+                  {formatPrice(product.originalPrice)}
+                </span>
+              )}
+            </>
+          ) : (
+            <span className="text-sm font-semibold text-gold uppercase tracking-wider">
+              Consulte
             </span>
           )}
         </div>
