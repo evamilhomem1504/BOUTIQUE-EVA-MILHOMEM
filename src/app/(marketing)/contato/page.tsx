@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Send, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
+import { Send, MapPin, Clock, Phone, Mail, MessageCircle } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -253,6 +253,21 @@ export default function ContatoPage() {
                       className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors"
                     >
                       @evamilhomem_
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-9 h-9 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                    <Mail size={16} className="text-gold" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm text-noir">E-mail</p>
+                    <a
+                      href={`mailto:${siteConfig.contact.email}`}
+                      className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors break-all"
+                    >
+                      {siteConfig.contact.email}
                     </a>
                   </div>
                 </div>

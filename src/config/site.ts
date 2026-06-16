@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   whatsappNumber: "5594991703949",
   contact: {
-    email: "",
+    email: "evamilhomem1504@gmail.com",
     phone: "(94) 99170-3949",
     address: "Av. Fernanda Guilhon, 800 — Conceição do Araguaia, PA",
     hours: "Seg–Sex 08h–18h | Sáb 08h–13h",

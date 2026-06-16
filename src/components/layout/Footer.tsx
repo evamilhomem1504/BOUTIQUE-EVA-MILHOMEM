@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@/components/ui/separator";
-import { MessageCircle, Phone, MapPin, Clock } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Clock, Mail } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { NewsletterForm } from "@/components/shared/NewsletterForm";
 
@@ -136,6 +136,15 @@ export function Footer() {
                   className="text-white/60 hover:text-gold text-sm transition-colors"
                 >
                   {siteConfig.contact.phone}
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail size={14} className="text-gold mt-0.5 shrink-0" />
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-white/60 hover:text-gold text-sm transition-colors break-all"
+                >
+                  {siteConfig.contact.email}
                 </a>
               </li>
             </ul>
