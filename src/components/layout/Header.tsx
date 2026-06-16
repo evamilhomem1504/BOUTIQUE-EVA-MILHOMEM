@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingBag, Search, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
@@ -15,63 +15,69 @@ export function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
+  useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   const isHome = pathname === "/";
-  const isDark = !scrolled && isHome; // transparente = sobre hero escuro
+  const transparent = !scrolled && isHome;
 
   return (
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-500",
-          !isDark
-            ? "bg-noir/97 backdrop-blur-md border-b border-white/10 shadow-sm"
-            : "bg-transparent"
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-700 ease-in-out",
+          transparent
+            ? "bg-transparent border-b border-transparent"
+            : "bg-noir/98 backdrop-blur-lg border-b border-white/8 shadow-[0_1px_20px_rgba(0,0,0,0.3)]"
         )}
       >
-        <div className="container-boutique">
-          <div className="flex items-center justify-between h-16 md:h-20">
+        {/* Linha dourada topo */}
+        <div className="h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-60" />
 
-            {/* Logo oficial */}
+        <div className="container-boutique">
+          <div className="flex items-center justify-between h-18 md:h-22 py-3 md:py-4">
+
+            {/* Logo */}
             <Link
               href="/"
-              aria-label="Eva Milhomem — Página inicial"
-              className="flex items-center"
+              aria-label="Boutique Eva Milhomem — Página inicial"
+              className="flex items-center shrink-0 group"
             >
-              <Image
-                src="/logo.png"
-                alt="Eva Milhomem"
-                width={150}
-                height={68}
-                priority
-                className="object-contain h-10 md:h-12 w-auto"
-              />
+              <div className="relative">
+                <Image
+                  src="/logo.png"
+                  alt="Eva Milhomem"
+                  width={200}
+                  height={90}
+                  priority
+                  className="object-contain w-auto h-11 md:h-14 transition-all duration-300 group-hover:opacity-85"
+                  style={{ filter: "brightness(1.05) contrast(1.05)" }}
+                />
+              </div>
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-9">
               {siteConfig.nav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "text-xs font-semibold uppercase tracking-widest transition-colors duration-200 relative group",
-                    "text-off-white/80 hover:text-off-white",
-                    pathname === item.href && "text-gold"
+                    "relative text-[11px] font-sans font-semibold uppercase tracking-[0.18em]",
+                    "transition-colors duration-300 group",
+                    pathname === item.href
+                      ? "text-gold"
+                      : "text-off-white/75 hover:text-off-white"
                   )}
                 >
                   {item.label}
                   <span
                     className={cn(
-                      "absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-300",
+                      "absolute -bottom-1 left-0 h-px bg-gradient-to-r from-gold to-gold-light transition-all duration-400",
                       pathname === item.href ? "w-full" : "w-0 group-hover:w-full"
                     )}
                   />
@@ -79,30 +85,35 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Right icons */}
-            <div className="flex items-center gap-3">
-              <button
-                aria-label="Pesquisar"
-                className="hidden md:flex items-center justify-center w-9 h-9 rounded-full text-off-white/70 hover:text-gold transition-colors"
+            {/* Ações direita */}
+            <div className="flex items-center gap-2">
+              {/* WhatsApp CTA desktop */}
+              <a
+                href={siteConfig.links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 border border-gold/50 text-gold hover:bg-gold hover:text-noir text-[10px] font-semibold uppercase tracking-[0.2em] px-4 py-2 transition-all duration-300"
               >
-                <Search size={18} />
-              </button>
-              <button
-                aria-label="Carrinho"
-                className="flex items-center justify-center w-9 h-9 rounded-full text-off-white/70 hover:text-gold transition-colors relative"
-              >
-                <ShoppingBag size={18} />
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-gold text-noir text-[9px] font-bold rounded-full flex items-center justify-center">
-                  0
-                </span>
-              </button>
+                Fale Conosco
+              </a>
 
+              {/* Hambúrguer mobile */}
               <button
                 aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
                 onClick={() => setMobileOpen((v) => !v)}
-                className="lg:hidden flex items-center justify-center w-9 h-9 rounded-full text-off-white/70 hover:text-gold transition-colors"
+                className="lg:hidden flex items-center justify-center w-10 h-10 text-off-white/80 hover:text-gold transition-colors"
               >
-                {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.span
+                    key={mobileOpen ? "x" : "menu"}
+                    initial={{ opacity: 0, rotate: -90 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: 90 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+                  </motion.span>
+                </AnimatePresence>
               </button>
             </div>
           </div>
@@ -113,48 +124,61 @@ export function Header() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-30 bg-noir pt-20 px-6 lg:hidden"
+            initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
+            exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+            className="fixed inset-0 z-30 bg-noir flex flex-col pt-24 px-8 lg:hidden"
           >
-            {/* Logo no menu mobile */}
-            <div className="flex justify-center mb-8">
+            {/* Linha dourada decorativa */}
+            <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mb-8" />
+
+            {/* Logo centralizada */}
+            <div className="flex justify-center mb-10">
               <Image
                 src="/logo.png"
                 alt="Eva Milhomem"
-                width={180}
-                height={81}
-                className="object-contain h-14 w-auto"
+                width={200}
+                height={90}
+                className="object-contain h-16 w-auto"
+                style={{ filter: "brightness(1.05) contrast(1.05)" }}
               />
             </div>
 
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col">
               {siteConfig.nav.map((item, i) => (
                 <motion.div
                   key={item.href}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -24 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06 }}
+                  transition={{ delay: 0.1 + i * 0.07, ease: "easeOut" }}
                 >
                   <Link
                     href={item.href}
                     className={cn(
-                      "block py-4 font-heading text-2xl font-bold border-b border-white/10 transition-colors",
-                      pathname === item.href ? "text-gold" : "text-off-white hover:text-gold"
+                      "flex items-center justify-between py-4 border-b border-white/8",
+                      "font-heading text-2xl transition-colors duration-200",
+                      pathname === item.href ? "text-gold" : "text-off-white/80 hover:text-gold"
                     )}
                   >
                     {item.label}
+                    <span className="text-gold/40 text-sm">→</span>
                   </Link>
                 </motion.div>
               ))}
             </nav>
 
-            <div className="mt-10 space-y-2">
-              <p className="text-white/40 text-sm">{siteConfig.contact.email}</p>
-              <p className="text-white/40 text-sm">{siteConfig.contact.phone}</p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-auto mb-10 space-y-1"
+            >
+              <div className="h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-6" />
+              <p className="text-white/35 text-xs tracking-wider">{siteConfig.contact.phone}</p>
+              <p className="text-white/35 text-xs tracking-wider">{siteConfig.contact.email}</p>
+              <p className="text-white/35 text-xs tracking-wider">{siteConfig.contact.hours}</p>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

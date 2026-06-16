@@ -74,6 +74,93 @@ export const products: Product[] = [
     tags: ["vestido", "vermelho", "elegante", "festa"],
   },
 
+  {
+    id: "f4",
+    name: "Maiô RDSOL",
+    slug: "maio-rdsol",
+    description: "Maiô RDSOL elegante e sofisticado para os dias de verão.",
+    price: 110.0,
+    category: "vestidos",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/maio-rdsol.jpg`,
+        alt: "Maiô RDSOL — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M"],
+    colors: ["Único"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "rdsol", "praia", "verão"],
+  },
+
+  {
+    id: "f5",
+    name: "Biquíni BanaBana",
+    slug: "biquini-banana",
+    description: "Biquíni BanaBana com estampa animal print em tons de caramelo e marrom. Top com bojo e calcinha com amarração lateral.",
+    price: 75.0,
+    category: "vestidos",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-banana.jpg`,
+        alt: "Biquíni BanaBana animal print — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["GG"],
+    colors: ["Animal Print"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "banabana", "animal print", "praia", "verão"],
+  },
+
+  {
+    id: "f6",
+    name: "Biquíni BanaBana Zebra",
+    slug: "biquini-banana-zebra",
+    description: "Biquíni BanaBana com estampa zebra em preto, azul, dourado e verde água. Top com bojo e calcinha com amarração lateral.",
+    price: 83.0,
+    category: "vestidos",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-banana-zebra.jpg`,
+        alt: "Biquíni BanaBana zebra — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M"],
+    colors: ["Zebra Preto/Azul"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "banabana", "zebra", "praia", "verão"],
+  },
+  {
+    id: "f7",
+    name: "Calça BanaBana Zebra",
+    slug: "calca-banana-zebra",
+    description: "Calça BanaBana com estampa zebra combinando com o biquíni. Cintura elástica, tecido leve e fluido.",
+    price: 90.0,
+    category: "calças-femininas",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-banana-zebra.jpg`,
+        alt: "Calça BanaBana zebra — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P"],
+    colors: ["Zebra Preto/Azul"],
+    inStock: true,
+    featured: false,
+    isNew: true,
+    tags: ["calça", "banabana", "zebra", "praia", "verão"],
+  },
+
   // ── MODA MASCULINA ─────────────────────────────────────────────────────────
   {
     id: "m1",
