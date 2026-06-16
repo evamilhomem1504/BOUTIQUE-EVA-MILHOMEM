@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Separator } from "@/components/ui/separator";
-import { MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Clock } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { NewsletterForm } from "@/components/shared/NewsletterForm";
 
@@ -30,14 +31,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-5">
-              <span className="font-heading text-2xl font-bold tracking-[0.12em] text-off-white">
-                EVA MILHOMEM
-              </span>
-              <br />
-              <span className="text-[9px] tracking-[0.35em] uppercase text-gold">
-                Boutique Premium
-              </span>
+            <Link href="/" className="inline-block mb-5" aria-label="Eva Milhomem">
+              <Image
+                src="/logo.png"
+                alt="Eva Milhomem"
+                width={160}
+                height={72}
+                className="object-contain h-14 w-auto"
+              />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
               {siteConfig.description}
@@ -127,12 +128,14 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail size={14} className="text-gold mt-0.5 shrink-0" />
+                <Phone size={14} className="text-gold mt-0.5 shrink-0" />
                 <a
-                  href={`mailto:${siteConfig.contact.email}`}
+                  href={`https://wa.me/${siteConfig.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/60 hover:text-gold text-sm transition-colors"
                 >
-                  {siteConfig.contact.email}
+                  {siteConfig.contact.phone}
                 </a>
               </li>
             </ul>

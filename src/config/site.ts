@@ -6,15 +6,15 @@ export const siteConfig = {
   url: "https://boutiquaevamilhomem.com.br",
   ogImage: "/og-image.jpg",
   links: {
-    instagram: "https://instagram.com/boutiquaevamilhomem",
-    whatsapp: "https://wa.me/5511999999999",
+    instagram: "https://instagram.com/evamilhomem_",
+    whatsapp: "https://wa.me/5594991703949",
   },
-  whatsappNumber: "5511999999999",
+  whatsappNumber: "5594991703949",
   contact: {
-    email: "contato@evamilhomem.com.br",
-    phone: "+55 (11) 9 9999-9999",
-    address: "Rua Oscar Freire, 900 — Jardins, São Paulo – SP",
-    hours: "Seg–Sex 10h–20h | Sáb 10h–18h",
+    email: "",
+    phone: "(94) 99170-3949",
+    address: "Av. Fernanda Guilhon, 800 — Conceição do Araguaia, PA",
+    hours: "Seg–Sex 08h–18h | Sáb 08h–13h",
   },
   nav: [
     { label: "Moda Feminina", href: "/moda-feminina" },

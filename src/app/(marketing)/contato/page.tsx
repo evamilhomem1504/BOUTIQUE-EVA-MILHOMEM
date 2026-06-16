@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Send, MapPin, Clock, Phone, Mail } from "lucide-react";
+import { Send, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { InstagramIcon } from "@/components/shared/InstagramIcon";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -124,53 +124,37 @@ export default function ContatoPage() {
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <Label htmlFor="email" className="text-xs uppercase tracking-wider font-semibold">
-                      E-mail *
+                    <Label htmlFor="phone" className="text-xs uppercase tracking-wider font-semibold">
+                      WhatsApp
                     </Label>
                     <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={form.email}
+                      id="phone2"
+                      name="phone"
+                      value={form.phone}
                       onChange={handleChange}
-                      placeholder="seu@email.com"
+                      placeholder="(94) 9 9999-9999"
                       className="rounded-none border-border focus-visible:ring-gold h-11"
                     />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div className="space-y-1.5">
-                    <Label htmlFor="phone" className="text-xs uppercase tracking-wider font-semibold">
-                      Telefone
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      placeholder="(11) 9 9999-9999"
-                      className="rounded-none border-border focus-visible:ring-gold h-11"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label htmlFor="subject" className="text-xs uppercase tracking-wider font-semibold">
-                      Assunto
-                    </Label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      value={form.subject}
-                      onChange={handleChange}
-                      className="w-full h-11 border border-border bg-background px-3 text-sm focus:outline-none focus:ring-1 focus:ring-gold rounded-none"
-                    >
-                      <option value="">Selecione</option>
-                      <option value="consultoria">Consultoria de Moda</option>
-                      <option value="produto">Dúvida sobre Produto</option>
-                      <option value="troca">Troca / Devolução</option>
-                      <option value="outros">Outros</option>
-                    </select>
-                  </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="subject" className="text-xs uppercase tracking-wider font-semibold">
+                    Assunto
+                  </Label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    className="w-full h-11 border border-border bg-background px-3 text-sm focus:outline-none focus:ring-1 focus:ring-gold rounded-none"
+                  >
+                    <option value="">Selecione</option>
+                    <option value="consultoria">Consultoria de Moda</option>
+                    <option value="produto">Dúvida sobre Produto</option>
+                    <option value="troca">Troca / Devolução</option>
+                    <option value="outros">Outros</option>
+                  </select>
                 </div>
 
                 <div className="space-y-1.5">
@@ -244,27 +228,14 @@ export default function ContatoPage() {
                     <Phone size={16} className="text-gold" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-noir">Telefone</p>
+                    <p className="font-semibold text-sm text-noir">Telefone / WhatsApp</p>
                     <a
-                      href={`tel:${siteConfig.contact.phone}`}
+                      href={`https://wa.me/${siteConfig.whatsappNumber}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors"
                     >
                       {siteConfig.contact.phone}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-9 h-9 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <Mail size={16} className="text-gold" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm text-noir">E-mail</p>
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors"
-                    >
-                      {siteConfig.contact.email}
                     </a>
                   </div>
                 </div>
@@ -281,7 +252,24 @@ export default function ContatoPage() {
                       rel="noopener noreferrer"
                       className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors"
                     >
-                      @boutiquaevamilhomem
+                      @evamilhomem_
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-9 h-9 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                    <MessageCircle size={16} className="text-gold" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm text-noir">WhatsApp</p>
+                    <a
+                      href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Vim pelo site da Boutique Eva Milhomem.")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground text-sm mt-0.5 hover:text-gold transition-colors"
+                    >
+                      Clique para conversar
                     </a>
                   </div>
                 </div>
