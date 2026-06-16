@@ -17,7 +17,7 @@ export const products: Product[] = [
     gender: "feminino",
     images: [
       {
-        url: `${P}/maio-saida-saue.jpg`,
+        url: `${P}/maio-saida-saue.png`,
         alt: "Maiô Sauê verde — Boutique Eva Milhomem",
       },
     ],
@@ -39,7 +39,7 @@ export const products: Product[] = [
     gender: "feminino",
     images: [
       {
-        url: `${P}/maio-saida-saue.jpg`,
+        url: `${P}/maio-saida-saue.png`,
         alt: "Saída Longa Sauê verde — Boutique Eva Milhomem",
       },
     ],
@@ -49,6 +49,29 @@ export const products: Product[] = [
     featured: true,
     isNew: true,
     tags: ["saída de praia", "tule", "sauê", "verde", "verão"],
+  },
+
+  {
+    id: "f3",
+    name: "Vestido Feminino Vermelho",
+    slug: "vestido-feminino-vermelho",
+    description:
+      "Vestido feminino vermelho elegante. Perfeito para ocasiões especiais com muito estilo e sofisticação.",
+    price: 0,
+    category: "vestidos",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/vestido-feminino-vermelho.jpg`,
+        alt: "Vestido feminino vermelho — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P", "M", "G"],
+    colors: ["Vermelho"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["vestido", "vermelho", "elegante", "festa"],
   },
 
   // ── MODA MASCULINA ─────────────────────────────────────────────────────────
@@ -63,7 +86,7 @@ export const products: Product[] = [
     gender: "masculino",
     images: [
       {
-        url: `${P}/bone-camisa-chinelo.jpg`,
+        url: `${P}/bone-cinto-carteira.webp`,
         alt: "Camisa Acostamento preta — Boutique Eva Milhomem",
       },
     ],
@@ -85,7 +108,7 @@ export const products: Product[] = [
     gender: "masculino",
     images: [
       {
-        url: `${P}/look-masculino-verde.jpg`,
+        url: `${P}/look-masculino-verde.webp`,
         alt: "Camiseta Ogochi Basic Tech — Boutique Eva Milhomem",
       },
     ],
@@ -107,7 +130,7 @@ export const products: Product[] = [
     gender: "masculino",
     images: [
       {
-        url: `${P}/look-masculino-verde.jpg`,
+        url: `${P}/look-masculino-verde.webp`,
         alt: "Bermuda Ogochi verde militar — Boutique Eva Milhomem",
       },
     ],
@@ -131,7 +154,7 @@ export const products: Product[] = [
     gender: "unissex",
     images: [
       {
-        url: `${P}/bone-camisa-chinelo.jpg`,
+        url: `${P}/bone-cinto-carteira.webp`,
         alt: "Boné Ogochi — Boutique Eva Milhomem",
       },
     ],
@@ -153,7 +176,7 @@ export const products: Product[] = [
     gender: "unissex",
     images: [
       {
-        url: `${P}/bone-cinto-carteira.jpg`,
+        url: `${P}/bone-cinto-carteira.webp`,
         alt: "Carteira Ogochi — Boutique Eva Milhomem",
       },
     ],
@@ -175,7 +198,7 @@ export const products: Product[] = [
     gender: "unissex",
     images: [
       {
-        url: `${P}/bone-cinto-carteira.jpg`,
+        url: `${P}/bone-cinto-carteira.webp`,
         alt: "Cinto Ogochi — Boutique Eva Milhomem",
       },
     ],
@@ -197,7 +220,7 @@ export const products: Product[] = [
     gender: "unissex",
     images: [
       {
-        url: `${P}/bone-camisa-chinelo.jpg`,
+        url: `${P}/bone-cinto-carteira.webp`,
         alt: "Chinelo Acostamento — Boutique Eva Milhomem",
       },
     ],
@@ -219,7 +242,7 @@ export const products: Product[] = [
     gender: "unissex",
     images: [
       {
-        url: `${P}/kit-namorados.jpg`,
+        url: `${P}/kit-namorados.webp`,
         alt: "Sandália Ogochi — Boutique Eva Milhomem",
       },
     ],
