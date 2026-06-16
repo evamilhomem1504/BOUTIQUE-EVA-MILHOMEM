@@ -1,10 +1,16 @@
 export type ProductCategory =
   | "vestidos"
   | "blusas"
-  | "calças"
+  | "calças-femininas"
   | "saias"
+  | "camisas"
+  | "calças-masculinas"
+  | "blazers"
+  | "bolsas"
   | "acessórios"
-  | "bolsas";
+  | "cintos";
+
+export type ProductGender = "feminino" | "masculino" | "unissex";
 
 export interface ProductImage {
   url: string;
@@ -19,6 +25,7 @@ export interface Product {
   price: number;
   originalPrice?: number;
   category: ProductCategory;
+  gender: ProductGender;
   images: ProductImage[];
   sizes: string[];
   colors: string[];
@@ -26,5 +33,17 @@ export interface Product {
   featured: boolean;
   isNew: boolean;
   tags: string[];
-  createdAt: string;
+}
+
+export interface Campaign {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  cta: string;
+  ctaHref: string;
+  season: string;
+  year: number;
+  featured: boolean;
 }
