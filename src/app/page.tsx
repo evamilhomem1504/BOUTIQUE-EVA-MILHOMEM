@@ -47,74 +47,67 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex overflow-hidden bg-noir">
-        {/* Foto da modelo — metade esquerda */}
-        <div className="relative w-1/2 shrink-0 hidden md:block">
-          <Image
-            src={HERO_IMG}
-            alt="Boutique Eva Milhomem"
-            fill
-            priority
-            sizes="50vw"
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-noir/60" />
+      <section className="relative min-h-screen flex items-end overflow-hidden bg-noir">
+        {/* Foto full-bleed — cobre toda a tela */}
+        <Image
+          src={HERO_IMG}
+          alt="Boutique Eva Milhomem"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_15%]"
+        />
+
+        {/* Gradiente esquerda escuro → transparente (preserva a modelo) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-noir/10 via-transparent to-noir/90" />
+        {/* Gradiente base para legibilidade mobile */}
+        <div className="absolute inset-0 bg-gradient-to-t from-noir/80 via-noir/20 to-transparent" />
+
+        {/* Conteúdo — alinhado à direita em desktop, centralizado em mobile */}
+        <div className="relative z-10 w-full container-boutique pb-20 md:pb-28 pt-32">
+          <div className="md:ml-auto md:max-w-lg lg:max-w-xl">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px w-12 bg-gold/50" />
+              <span className="text-gold text-[10px] font-sans font-semibold uppercase tracking-[0.45em]">
+                Conceição do Araguaia — Pará
+              </span>
+            </div>
+
+            <h1
+              className="font-heading font-light text-off-white leading-[0.88] tracking-tight mb-8"
+              style={{ fontSize: "clamp(3.2rem, 6.5vw, 7.5rem)" }}
+            >
+              Elegância
+              <span className="block italic text-gradient-gold">que conta</span>
+              histórias.
+            </h1>
+
+            <p className="text-white/50 font-sans text-base max-w-sm mb-12 leading-relaxed">
+              Moda premium com peças exclusivas para quem valoriza sofisticação e individualidade.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <Link
+                href="/moda-feminina"
+                className="inline-flex items-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
+              >
+                Explorar Coleção <ArrowRight size={13} />
+              </Link>
+              <Link
+                href="/moda-praia"
+                className="inline-flex items-center gap-3 border border-white/25 text-white/70 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:border-gold hover:text-gold transition-all duration-300"
+              >
+                Moda Praia
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Versão mobile: foto de fundo full-width + overlay */}
-        <div className="absolute inset-0 md:hidden">
-          <Image
-            src={HERO_IMG}
-            alt="Boutique Eva Milhomem"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-noir/65" />
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+          <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
+          <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
         </div>
-
-        {/* Conteúdo texto — metade direita */}
-        <div className="relative z-10 flex flex-col justify-center w-full md:w-1/2 px-8 md:px-16 lg:px-20 pt-28 pb-16 md:pt-0 md:pb-0">
-          <div className="flex items-center gap-4 mb-10">
-            <div className="h-px w-16 bg-gold/40" />
-            <span className="text-gold text-[10px] font-sans font-semibold uppercase tracking-[0.45em]">
-              Conceição do Araguaia — Pará
-            </span>
-          </div>
-
-          <h1
-            className="font-heading font-light text-off-white leading-[0.9] tracking-tight mb-8"
-            style={{ fontSize: "clamp(3rem, 6vw, 7rem)" }}
-          >
-            Elegância
-            <span className="block italic text-gradient-gold">que conta</span>
-            histórias.
-          </h1>
-
-          <p className="text-white/40 font-sans text-base max-w-sm mb-12 leading-relaxed">
-            Moda premium com peças exclusivas para quem valoriza sofisticação e individualidade.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-start gap-4">
-            <Link
-              href="/moda-feminina"
-              className="inline-flex items-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
-            >
-              Explorar Coleção <ArrowRight size={13} />
-            </Link>
-            <Link
-              href="/moda-praia"
-              className="inline-flex items-center gap-3 border border-white/20 text-white/70 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:border-gold hover:text-gold transition-all duration-300"
-            >
-              Moda Praia
-            </Link>
-          </div>
-
-          <div className="mt-16 hidden md:flex flex-col items-start gap-2">
-            <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
-            <div className="w-px h-12 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
-          </div>
         </div>
       </section>
 
