@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { getFeaturedProducts, campaigns, looks, getLookProducts } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&h=1080&fit=crop";
+const HERO_IMG = "/products/hero-principal.jpg";
 
 type Category = { label: string; href: string; image: string; description: string; objectPosition?: string };
 const categories: Category[] = [
@@ -47,40 +47,56 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-noir">
-        <Image
-          src={HERO_IMG}
-          alt="Boutique Eva Milhomem"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-15"
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(201,169,110,0.07)_0%,transparent_70%)]" />
+      <section className="relative min-h-screen flex overflow-hidden bg-noir">
+        {/* Foto da modelo — metade esquerda */}
+        <div className="relative w-1/2 shrink-0 hidden md:block">
+          <Image
+            src={HERO_IMG}
+            alt="Boutique Eva Milhomem"
+            fill
+            priority
+            sizes="50vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-noir/60" />
+        </div>
 
-        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-10">
+        {/* Versão mobile: foto de fundo full-width + overlay */}
+        <div className="absolute inset-0 md:hidden">
+          <Image
+            src={HERO_IMG}
+            alt="Boutique Eva Milhomem"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-noir/65" />
+        </div>
+
+        {/* Conteúdo texto — metade direita */}
+        <div className="relative z-10 flex flex-col justify-center w-full md:w-1/2 px-8 md:px-16 lg:px-20 pt-28 pb-16 md:pt-0 md:pb-0">
+          <div className="flex items-center gap-4 mb-10">
             <div className="h-px w-16 bg-gold/40" />
             <span className="text-gold text-[10px] font-sans font-semibold uppercase tracking-[0.45em]">
               Conceição do Araguaia — Pará
             </span>
-            <div className="h-px w-16 bg-gold/40" />
           </div>
 
           <h1
             className="font-heading font-light text-off-white leading-[0.9] tracking-tight mb-8"
-            style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
+            style={{ fontSize: "clamp(3rem, 6vw, 7rem)" }}
           >
             Elegância
             <span className="block italic text-gradient-gold">que conta</span>
             histórias.
           </h1>
 
-          <p className="text-white/40 font-sans text-base md:text-lg max-w-sm mx-auto mb-12 leading-relaxed">
+          <p className="text-white/40 font-sans text-base max-w-sm mb-12 leading-relaxed">
             Moda premium com peças exclusivas para quem valoriza sofisticação e individualidade.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
             <Link
               href="/moda-feminina"
               className="inline-flex items-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
@@ -94,11 +110,11 @@ export default function HomePage() {
               Moda Praia
             </Link>
           </div>
-        </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
+          <div className="mt-16 hidden md:flex flex-col items-start gap-2">
+            <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
+            <div className="w-px h-12 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
+          </div>
         </div>
       </section>
 
