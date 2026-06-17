@@ -108,7 +108,6 @@ export default function HomePage() {
           <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
           <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
         </div>
-        </div>
       </section>
 
       {/* ── STRIP DIFERENCIADORES ────────────────────────────────── */}
