@@ -48,20 +48,20 @@ export default function HomePage() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-end overflow-hidden bg-noir">
-        {/* Foto full-bleed — cobre toda a tela */}
+        {/* Foto contida — modelo inteira, sem corte */}
         <Image
           src={HERO_IMG}
           alt="Boutique Eva Milhomem"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_15%]"
+          className="object-contain object-bottom"
         />
 
-        {/* Gradiente esquerda escuro → transparente (preserva a modelo) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-noir/10 via-transparent to-noir/90" />
-        {/* Gradiente base para legibilidade mobile */}
-        <div className="absolute inset-0 bg-gradient-to-t from-noir/80 via-noir/20 to-transparent" />
+        {/* Gradiente lateral direito para área do texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-noir/5 via-noir/30 to-noir/95" />
+        {/* Gradiente base inferior */}
+        <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-noir/20" />
 
         {/* Conteúdo — alinhado à direita em desktop, centralizado em mobile */}
         <div className="relative z-10 w-full container-boutique pb-20 md:pb-28 pt-32">
