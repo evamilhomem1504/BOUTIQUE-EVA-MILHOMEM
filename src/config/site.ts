@@ -21,6 +21,7 @@ export const siteConfig = {
     { label: "Moda Masculina", href: "/moda-masculina" },
     { label: "Moda Praia", href: "/moda-praia" },
     { label: "Calçados", href: "/calcados-femininos" },
+    { label: "Bolsas", href: "/bolsas" },
     { label: "Moda Infantil", href: "/moda-infantil" },
     { label: "Bolsas & Acessórios", href: "/bolsas-acessorios" },
     { label: "Campanhas", href: "/campanhas" },

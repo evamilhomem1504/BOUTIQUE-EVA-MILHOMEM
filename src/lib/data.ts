@@ -379,6 +379,39 @@ export const products: Product[] = [
     tags: ["bolsa", "santa lolla", "lona", "bege", "caramelo"],
   },
 
+  {
+    id: "b5",
+    name: "Bolsa Santa Lolla Palha Natural",
+    slug: "bolsa-santa-lolla-palha-natural",
+    description: "Tote bag Santa Lolla em palha trançada natural com alças e detalhes em couro caramelo. Fivelas e pingente SL dourado. Sofisticada e versátil.",
+    price: 569.90,
+    category: "bolsas",
+    gender: "feminino",
+    images: [{ url: `${P}/bolsa-santa-lolla-palha-simples.jpg`, alt: "Bolsa Santa Lolla palha natural com alças caramelo" }],
+    sizes: ["Único"],
+    colors: ["Natural/Caramelo"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bolsa", "tote", "santa lolla", "palha", "natural", "caramelo"],
+  },
+  {
+    id: "b6",
+    name: "Bolsa Santa Lolla Palha com Lenço Leopard",
+    slug: "bolsa-santa-lolla-palha-leopard",
+    description: "Tote bag Santa Lolla em palha trançada com alças caramelo, lenço animal print leopard e pingente SL dourado. Um acessório que transforma qualquer look.",
+    price: 569.90,
+    category: "bolsas",
+    gender: "feminino",
+    images: [{ url: `${P}/bolsa-santa-lolla-palha-leopard.jpg`, alt: "Bolsa Santa Lolla palha com lenço leopard" }],
+    sizes: ["Único"],
+    colors: ["Natural/Leopard"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bolsa", "tote", "santa lolla", "palha", "leopard", "animal print"],
+  },
+
   // ── MODA INFANTIL ──────────────────────────────────────────────────────────
   {
     id: "i4",
@@ -652,9 +685,16 @@ export function getProductsByGender(gender: "feminino" | "masculino") {
   );
 }
 
+export function getBolsas() {
+  return products.filter(
+    (p) => p.category === "bolsas" || p.extraCategories?.includes("bolsas")
+  );
+}
+
 export function getBagsAndAccessories() {
   return products.filter((p) =>
-    ["bolsas", "acessórios", "cintos"].includes(p.category)
+    ["bolsas", "acessórios", "cintos"].includes(p.category) ||
+    p.extraCategories?.some((c) => ["bolsas", "acessórios", "cintos"].includes(c))
   );
 }
 

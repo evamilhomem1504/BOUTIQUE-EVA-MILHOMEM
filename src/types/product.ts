@@ -31,6 +31,7 @@ export interface Product {
   price: number;
   originalPrice?: number;
   category: ProductCategory;
+  extraCategories?: ProductCategory[];
   gender: ProductGender;
   images: ProductImage[];
   sizes: string[];
