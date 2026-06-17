@@ -47,26 +47,32 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden bg-noir">
-        {/* Foto contida — modelo inteira, sem corte */}
-        <Image
-          src={HERO_IMG}
-          alt="Boutique Eva Milhomem"
-          fill
-          priority
-          sizes="100vw"
-          className="object-contain object-bottom"
-        />
+      <section className="relative bg-noir overflow-hidden" style={{ minHeight: "100svh" }}>
 
-        {/* Gradiente lateral direito para área do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-noir/5 via-noir/30 to-noir/95" />
-        {/* Gradiente base inferior */}
-        <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-noir/20" />
+        {/* ── DESKTOP: grid 45/55 ── */}
+        <div className="hidden md:grid h-full" style={{ minHeight: "100svh", gridTemplateColumns: "45% 55%" }}>
 
-        {/* Conteúdo — alinhado à direita em desktop, centralizado em mobile */}
-        <div className="relative z-10 w-full container-boutique pb-20 md:pb-28 pt-32">
-          <div className="md:ml-auto md:max-w-lg lg:max-w-xl">
-            <div className="flex items-center gap-4 mb-8">
+          {/* Painel esquerdo — foto da modelo */}
+          <div className="relative h-full" style={{ minHeight: "100svh" }}>
+            <Image
+              src={HERO_IMG}
+              alt="Boutique Eva Milhomem"
+              fill
+              priority
+              sizes="45vw"
+              className="object-cover"
+              style={{ objectPosition: "60% top" }}
+            />
+            {/* Sombra suave na borda direita para fundir com o painel do texto */}
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-noir" />
+          </div>
+
+          {/* Painel direito — texto */}
+          <div className="relative flex flex-col justify-center px-14 xl:px-20 pt-24 pb-16">
+            {/* Detalhe decorativo linha vertical */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-32 bg-gold/20" />
+
+            <div className="flex items-center gap-4 mb-10">
               <div className="h-px w-12 bg-gold/50" />
               <span className="text-gold text-[10px] font-sans font-semibold uppercase tracking-[0.45em]">
                 Conceição do Araguaia — Pará
@@ -75,18 +81,18 @@ export default function HomePage() {
 
             <h1
               className="font-heading font-light text-off-white leading-[0.88] tracking-tight mb-8"
-              style={{ fontSize: "clamp(3.2rem, 6.5vw, 7.5rem)" }}
+              style={{ fontSize: "clamp(3.4rem, 5.5vw, 7rem)" }}
             >
               Elegância
               <span className="block italic text-gradient-gold">que conta</span>
               histórias.
             </h1>
 
-            <p className="text-white/50 font-sans text-base max-w-sm mb-12 leading-relaxed">
+            <p className="text-white/45 font-sans text-base max-w-xs mb-12 leading-relaxed">
               Moda premium com peças exclusivas para quem valoriza sofisticação e individualidade.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start gap-4">
+            <div className="flex flex-row items-center gap-4">
               <Link
                 href="/moda-feminina"
                 className="inline-flex items-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
@@ -95,7 +101,56 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/moda-praia"
-                className="inline-flex items-center gap-3 border border-white/25 text-white/70 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:border-gold hover:text-gold transition-all duration-300"
+                className="inline-flex items-center gap-3 border border-white/20 text-white/60 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-4 hover:border-gold hover:text-gold transition-all duration-300"
+              >
+                Moda Praia
+              </Link>
+            </div>
+
+            {/* Scroll indicator */}
+            <div className="absolute bottom-10 left-14 xl:left-20 flex flex-col items-start gap-2">
+              <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
+              <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
+            </div>
+          </div>
+        </div>
+
+        {/* ── MOBILE: foto full-bleed + overlay + texto na base ── */}
+        <div className="md:hidden relative" style={{ minHeight: "100svh" }}>
+          <Image
+            src={HERO_IMG}
+            alt="Boutique Eva Milhomem"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "60% top" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/50 to-noir/10" />
+
+          <div className="absolute bottom-0 left-0 right-0 px-6 pb-16 pt-10 z-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px w-8 bg-gold/60" />
+              <span className="text-gold text-[10px] font-sans font-semibold uppercase tracking-[0.4em]">
+                Conceição do Araguaia
+              </span>
+            </div>
+            <h1 className="font-heading font-light text-off-white leading-[0.9] tracking-tight mb-6"
+              style={{ fontSize: "clamp(2.8rem, 11vw, 5rem)" }}>
+              Elegância
+              <span className="block italic text-gradient-gold">que conta</span>
+              histórias.
+            </h1>
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/moda-feminina"
+                className="inline-flex items-center justify-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-4 hover:bg-gold-light transition-colors duration-300"
+              >
+                Explorar Coleção <ArrowRight size={13} />
+              </Link>
+              <Link
+                href="/moda-praia"
+                className="inline-flex items-center justify-center gap-3 border border-white/25 text-white/70 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-4"
               >
                 Moda Praia
               </Link>
@@ -103,11 +158,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-          <span className="text-white/20 text-[9px] uppercase tracking-[0.4em]">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
-        </div>
       </section>
 
       {/* ── STRIP DIFERENCIADORES ────────────────────────────────── */}
