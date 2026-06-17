@@ -13,7 +13,9 @@ export const metadata: Metadata = {
   description: "Vestidos, blusas, calças e saias com elegância e exclusividade.",
 };
 
-const feminineProducts = products.filter((p) => p.gender === "feminino");
+const feminineProducts = products
+  .filter((p) => p.gender === "feminino")
+  .filter((p, i, arr) => arr.findIndex((x) => x.images[0].url === p.images[0].url) === i);
 
 const BASE = "https://images.unsplash.com";
 

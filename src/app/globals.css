@@ -50,25 +50,25 @@
   --radius-2xl: calc(var(--radius) * 1.8);
 }
 
-/* ── Tema claro premium ─────────────────────────────────────── */
+/* ── Tema principal (preto predominante) ────────────────────── */
 :root {
-  --background: #f8f5f1;
-  --foreground: #0a0a0a;
-  --card: #ffffff;
-  --card-foreground: #0a0a0a;
-  --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #0a0a0a;
-  --primary-foreground: #f8f5f1;
-  --secondary: #ede8e2;
-  --secondary-foreground: #0a0a0a;
-  --muted: #ede8e2;
-  --muted-foreground: #7a6f65;
+  --background: #0a0a0a;
+  --foreground: #f8f5f1;
+  --card: #111111;
+  --card-foreground: #f8f5f1;
+  --popover: #111111;
+  --popover-foreground: #f8f5f1;
+  --primary: #f8f5f1;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f8f5f1;
+  --muted: #1a1a1a;
+  --muted-foreground: #888075;
   --accent: #c9a96e;
   --accent-foreground: #0a0a0a;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e2dbd2;
-  --input: #e2dbd2;
+  --border: #222222;
+  --input: #222222;
   --ring: #c9a96e;
   --radius: 0.25rem;
 }
@@ -145,7 +145,7 @@
   }
 
   .container-boutique {
-    @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-10;
+    @apply mx-auto w-full max-w-[1536px] px-6 sm:px-10 lg:px-14;
   }
 
   .section-padding {

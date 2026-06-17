@@ -19,6 +19,9 @@ export const siteConfig = {
   nav: [
     { label: "Moda Feminina", href: "/moda-feminina" },
     { label: "Moda Masculina", href: "/moda-masculina" },
+    { label: "Moda Praia", href: "/moda-praia" },
+    { label: "Calçados", href: "/calcados-femininos" },
+    { label: "Moda Infantil", href: "/moda-infantil" },
     { label: "Bolsas & Acessórios", href: "/bolsas-acessorios" },
     { label: "Campanhas", href: "/campanhas" },
     { label: "Sobre", href: "/sobre" },

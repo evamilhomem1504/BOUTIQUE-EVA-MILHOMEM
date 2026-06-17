@@ -8,9 +8,15 @@ export type ProductCategory =
   | "blazers"
   | "bolsas"
   | "acessórios"
-  | "cintos";
+  | "cintos"
+  | "biquinis"
+  | "maiôs"
+  | "saídas-de-praia"
+  | "moda-praia"
+  | "calçados"
+  | "infantil";
 
-export type ProductGender = "feminino" | "masculino" | "unissex";
+export type ProductGender = "feminino" | "masculino" | "unissex" | "infantil-menino" | "infantil-menina";
 
 export interface ProductImage {
   url: string;
