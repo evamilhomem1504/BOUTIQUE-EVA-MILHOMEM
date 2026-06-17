@@ -380,6 +380,25 @@ export const products: Product[] = [
   },
 
   {
+    id: "b7",
+    name: "Bolsa Tramado Santa Lolla",
+    slug: "bolsa-tramado-santa-lolla",
+    description: "Tote bag Santa Lolla em palha tramada com alças e detalhes em couro nude. Fechamento por zíper, pingente SL dourado e alça de ombro removível. Elegante e funcional.",
+    price: 499.90,
+    category: "bolsas",
+    gender: "feminino",
+    images: [
+      { url: `${P}/bolsa-santa-lolla-tramado-1.jpg`, alt: "Bolsa Tramado Santa Lolla — vista lateral" },
+      { url: `${P}/bolsa-santa-lolla-tramado-2.jpg`, alt: "Bolsa Tramado Santa Lolla — vista frontal" },
+    ],
+    sizes: ["Único"],
+    colors: ["Natural/Nude"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bolsa", "tote", "santa lolla", "tramado", "palha", "nude"],
+  },
+  {
     id: "b5",
     name: "Bolsa Santa Lolla Palha Natural",
     slug: "bolsa-santa-lolla-palha-natural",
