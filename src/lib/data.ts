@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f22",
+    name: "Biquíni Tomara que Caia Verde",
+    slug: "biquini-tomara-verde",
+    description: "Biquíni tomara que caia verde sage acetinado com argola dourada e alça halter. Calcinha dupla com detalhes metálicos dourados. Elegância e sensualidade para a praia.",
+    price: 499.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-tomara-verde.jpg`, alt: "Biquíni Tomara que Caia Verde Sage — Boutique Eva Milhomem" }],
+    sizes: ["M"],
+    colors: ["Verde Sage"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "tomara que caia", "verde", "sage", "argola", "praia", "verão"],
+  },
+
+  {
     id: "f21",
     name: "Biquíni Tomara que Caia",
     slug: "biquini-tomara-que-caia",
