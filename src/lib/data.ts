@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f31",
+    name: "Maiô Chocolate com Bojo",
+    slug: "maio-chocolate-bojo",
+    description: "Maiô acetinado marrom chocolate com bojo estruturado e alças finas douradas. Corte de alta perna e caimento impecável. Sofisticação e sensualidade em cada detalhe.",
+    price: 499.90,
+    category: "maiôs",
+    gender: "feminino",
+    images: [{ url: `${P}/maio-chocolate-bojo.jpg`, alt: "Maiô Chocolate com Bojo — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Chocolate"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "chocolate", "marrom", "bojo", "alças", "praia", "verão"],
+  },
+
+  {
     id: "f30",
     name: "Maiô Ombro Único Off White",
     slug: "maio-ombro-unico-off-white",
