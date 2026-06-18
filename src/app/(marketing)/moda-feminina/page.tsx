@@ -14,8 +14,7 @@ export const metadata: Metadata = {
 };
 
 const feminineProducts = products
-  .filter((p) => p.gender === "feminino" && !p.groupedUnder)
-  .filter((p, i, arr) => arr.findIndex((x) => x.images[0].url === p.images[0].url) === i);
+  .filter((p) => p.gender === "feminino" && !p.groupedUnder);
 
 export default function ModaFemininaPage() {
   return (
