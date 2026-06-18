@@ -5,6 +5,7 @@ import { ProductCard } from "@/components/shared/ProductCard";
 import { ShopTheLook } from "@/components/shared/ShopTheLook";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { InstagramFeed } from "@/components/shared/InstagramFeed";
 import { getFeaturedProducts, campaigns, looks, getLookProducts } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
@@ -310,6 +311,9 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* ── INSTAGRAM FEED ───────────────────────────────────────── */}
+      <InstagramFeed />
 
       {/* ── CTA FINAL ────────────────────────────────────────────── */}
       <section className="bg-noir py-28 md:py-36 relative overflow-hidden">

@@ -87,17 +87,22 @@ export function ProductCard({ product, className }: ProductCardProps) {
         >
           {product.name}
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-0.5">
           {product.price > 0 ? (
             <>
-              <span className="text-sm font-semibold text-noir">
-                {formatPrice(product.price)}
-              </span>
-              {product.originalPrice && (
-                <span className="text-xs text-muted-foreground line-through">
-                  {formatPrice(product.originalPrice)}
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-semibold text-noir">
+                  {formatPrice(product.price)}
                 </span>
-              )}
+                {product.originalPrice && (
+                  <span className="text-xs text-muted-foreground line-through">
+                    {formatPrice(product.originalPrice)}
+                  </span>
+                )}
+              </div>
+              <span className="text-[11px] text-muted-foreground">
+                10x de {formatPrice(product.price / 10)} no cartão ou crediário
+              </span>
             </>
           ) : (
             <span className="text-sm font-semibold text-gold uppercase tracking-wider">
