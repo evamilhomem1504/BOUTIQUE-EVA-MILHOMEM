@@ -364,7 +364,10 @@ export const products: Product[] = [
     price: 399.90,
     category: "bolsas",
     gender: "feminino",
-    images: [{ url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Bolsa Santa Lolla caramelo com fivela dourada" }],
+    images: [
+      { url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Bolsa Santa Lolla caramelo com fivela dourada" },
+      { url: `${P}/bolsa-rasteira-caramelo-2.jpg`, alt: "Bolsa Santa Lolla caramelo — segundo ângulo" },
+    ],
     sizes: ["Único"],
     colors: ["Caramelo"],
     inStock: true,
@@ -380,7 +383,10 @@ export const products: Product[] = [
     price: 139.90,
     category: "calçados",
     gender: "feminino",
-    images: [{ url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Rasteira Ana Capri caramelo" }],
+    images: [
+      { url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Rasteira Ana Capri caramelo" },
+      { url: `${P}/bolsa-rasteira-caramelo-2.jpg`, alt: "Rasteira Ana Capri caramelo — segundo ângulo" },
+    ],
     sizes: ["35", "36", "37", "38", "39", "40"],
     colors: ["Caramelo"],
     inStock: true,
