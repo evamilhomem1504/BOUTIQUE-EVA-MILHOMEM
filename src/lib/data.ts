@@ -905,7 +905,7 @@ export const campaigns: Campaign[] = [
     subtitle: "Estilo que fala por você",
     description:
       "Acostamento, Ogochi e muito mais. Marcas premium que definem quem você é.",
-    image: `${P}/bone-camisa-chinelo.jpg`,
+    image: `${P}/kit-masculino-acostamento.png`,
     cta: "Explorar",
     ctaHref: "/moda-masculina",
     season: "Atemporal",

@@ -14,27 +14,25 @@ export const metadata: Metadata = {
 
 const masculineProducts = products.filter((p) => p.gender === "masculino");
 
-const BASE = "https://images.unsplash.com";
-
 export default function ModaMasculinaPage() {
   return (
     <>
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
-          src={`${BASE}/photo-1490114538077-0a7f8cb49891?w=1400&h=700&fit=crop`}
+          src="/products/polo-masculina.png"
           alt="Moda Masculina Eva Milhomem"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/40 to-transparent" />
         <div className="relative z-10 container-boutique pb-14">
           <p className="text-gold text-xs font-semibold uppercase tracking-[0.3em] mb-3">
             Coleção
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-bold text-off-white leading-tight">
+          <h1 className="font-heading text-5xl md:text-6xl font-light text-off-white leading-tight">
             Moda Masculina
           </h1>
           <p className="text-off-white/70 mt-3 text-lg max-w-lg">
@@ -64,7 +62,7 @@ export default function ModaMasculinaPage() {
       </section>
 
       {/* Grid */}
-      <section className="section-padding">
+      <section className="section-padding bg-off-white">
         <div className="container-boutique">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12">
             {masculineProducts.map((product, i) => (
@@ -104,11 +102,11 @@ export default function ModaMasculinaPage() {
             <AnimatedSection direction="right" className="flex-1 w-full">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={`${BASE}/photo-1507003211169-0a1dd7228f2d?w=700&h=500&fit=crop`}
-                  alt="Alfaiataria Masculina"
+                  src="/products/look-masculino-verde.webp"
+                  alt="Look Masculino Eva Milhomem"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
               </div>
             </AnimatedSection>
