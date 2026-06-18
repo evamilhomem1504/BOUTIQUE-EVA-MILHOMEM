@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ShoppingBag, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -15,10 +16,16 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, className }: ProductCardProps) {
-  const discount =
-    product.originalPrice
-      ? calculateDiscount(product.originalPrice, product.price)
-      : null;
+  const hasOptions = product.options && product.options.length > 0;
+  const [selectedOption, setSelectedOption] = useState(hasOptions ? 0 : -1);
+
+  const activePrice = hasOptions
+    ? product.options![selectedOption].price
+    : product.price;
+
+  const discount = product.originalPrice
+    ? calculateDiscount(product.originalPrice, product.price)
+    : null;
 
   return (
     <motion.div
@@ -77,7 +84,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
       </div>
 
       {/* Info */}
-      <div className="mt-3 flex flex-col gap-1">
+      <div className="mt-3 flex flex-col gap-1.5">
         <p className="text-[10px] uppercase tracking-widest text-gold font-medium">
           {product.category.replace("-", " ")}
         </p>
@@ -87,21 +94,42 @@ export function ProductCard({ product, className }: ProductCardProps) {
         >
           {product.name}
         </Link>
+
+        {/* Opções de variante */}
+        {hasOptions && (
+          <div className="flex flex-wrap gap-1.5 mt-0.5">
+            {product.options!.map((opt, i) => (
+              <button
+                key={opt.label}
+                onClick={() => setSelectedOption(i)}
+                className={cn(
+                  "text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 border transition-all duration-200",
+                  selectedOption === i
+                    ? "border-noir bg-noir text-off-white"
+                    : "border-border text-muted-foreground hover:border-noir hover:text-noir"
+                )}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="flex flex-col gap-0.5">
-          {product.price > 0 ? (
+          {activePrice > 0 ? (
             <>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-semibold text-noir">
-                  {formatPrice(product.price)}
+                  {formatPrice(activePrice)}
                 </span>
-                {product.originalPrice && (
+                {!hasOptions && product.originalPrice && (
                   <span className="text-xs text-muted-foreground line-through">
                     {formatPrice(product.originalPrice)}
                   </span>
                 )}
               </div>
               <span className="text-[11px] text-muted-foreground">
-                10x de {formatPrice(product.price / 10)} no cartão ou crediário
+                10x de {formatPrice(activePrice / 10)} no cartão ou crediário
               </span>
             </>
           ) : (

@@ -8,11 +8,15 @@ export const products: Product[] = [
   // ── MODA FEMININA ──────────────────────────────────────────────────────────
   {
     id: "f1",
-    name: "Maiô Sauê",
-    slug: "maio-saue",
+    name: "Conjunto Praia Sauê",
+    slug: "conjunto-praia-saue",
     description:
-      "Maiô com alças de bolinhas e detalhes franzidos no busto. Elegante e sofisticado para os dias de verão.",
+      "Maiô com alças de bolinhas e detalhes franzidos no busto + Saída longa em tule transparente. Escolha a peça ou leve o conjunto completo.",
     price: 474.0,
+    options: [
+      { label: "Só o Maiô", price: 474.0 },
+      { label: "Só a Saída", price: 439.0 },
+    ],
     category: "maiôs",
     gender: "feminino",
     images: [
@@ -30,6 +34,7 @@ export const products: Product[] = [
   },
   {
     id: "f2",
+    groupedUnder: "f1",
     name: "Saída Longa Sauê",
     slug: "saida-longa-saue",
     description:
@@ -120,10 +125,14 @@ export const products: Product[] = [
 
   {
     id: "f6",
-    name: "Biquíni BanaBana Zebra",
-    slug: "biquini-banana-zebra",
-    description: "Biquíni BanaBana com estampa zebra em preto, azul, dourado e verde água. Top com bojo e calcinha com amarração lateral.",
+    name: "Kit BanaBana Zebra",
+    slug: "kit-banana-zebra",
+    description: "Biquíni BanaBana com estampa zebra + Calça combinando. Top com bojo, calcinha amarração lateral e calça elástica. Escolha a peça ou leve o kit.",
     price: 83.0,
+    options: [
+      { label: "Só o Biquíni", price: 83.0 },
+      { label: "Só a Calça", price: 90.0 },
+    ],
     category: "biquinis",
     gender: "feminino",
     images: [
@@ -141,6 +150,7 @@ export const products: Product[] = [
   },
   {
     id: "f7",
+    groupedUnder: "f6",
     name: "Calça BanaBana Zebra",
     slug: "calca-banana-zebra",
     description: "Calça BanaBana com estampa zebra combinando com o biquíni. Cintura elástica, tecido leve e fluido.",
@@ -965,7 +975,7 @@ export function getLookProducts(look: Look) {
 
 export function getBeachwearProducts() {
   return products.filter((p) =>
-    ["biquinis", "maiôs", "saídas-de-praia", "moda-praia"].includes(p.category)
+    ["biquinis", "maiôs", "saídas-de-praia", "moda-praia"].includes(p.category) && !p.groupedUnder
   );
 }
 
@@ -1001,5 +1011,5 @@ export function getCalcadosFemininos() {
 }
 
 export function getFeaturedProducts() {
-  return products.filter((p) => p.featured);
+  return products.filter((p) => p.featured && !p.groupedUnder);
 }

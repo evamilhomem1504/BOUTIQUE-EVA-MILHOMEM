@@ -23,6 +23,11 @@ export interface ProductImage {
   alt: string;
 }
 
+export interface ProductOption {
+  label: string;
+  price: number;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -32,6 +37,8 @@ export interface Product {
   originalPrice?: number;
   category: ProductCategory;
   extraCategories?: ProductCategory[];
+  options?: ProductOption[];
+  groupedUnder?: string;
   gender: ProductGender;
   images: ProductImage[];
   sizes: string[];
