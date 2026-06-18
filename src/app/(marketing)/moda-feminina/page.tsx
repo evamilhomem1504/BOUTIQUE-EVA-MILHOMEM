@@ -14,10 +14,8 @@ export const metadata: Metadata = {
 };
 
 const feminineProducts = products
-  .filter((p) => p.gender === "feminino")
+  .filter((p) => p.gender === "feminino" && !p.groupedUnder)
   .filter((p, i, arr) => arr.findIndex((x) => x.images[0].url === p.images[0].url) === i);
-
-const BASE = "https://images.unsplash.com";
 
 export default function ModaFemininaPage() {
   return (
@@ -25,22 +23,22 @@ export default function ModaFemininaPage() {
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden">
         <Image
-          src={`${BASE}/photo-1483985988355-763728e1935b?w=1400&h=700&fit=crop`}
+          src="/products/capa-feminina.jpg"
           alt="Moda Feminina Eva Milhomem"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/40 to-transparent" />
         <div className="relative z-10 container-boutique pb-14">
           <p className="text-gold text-xs font-semibold uppercase tracking-[0.3em] mb-3">
             Coleção
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-bold text-off-white leading-tight">
+          <h1 className="font-heading text-5xl md:text-6xl font-light text-off-white leading-tight">
             Moda Feminina
           </h1>
-          <p className="text-off-white/70 mt-3 text-lg max-w-lg">
+          <p className="text-off-white/70 mt-3 text-base max-w-lg">
             Peças que celebram a feminilidade com sofisticação e personalidade.
           </p>
         </div>
@@ -67,7 +65,7 @@ export default function ModaFemininaPage() {
       </section>
 
       {/* Grid de produtos */}
-      <section className="section-padding">
+      <section className="section-padding bg-off-white">
         <div className="container-boutique">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12">
             {feminineProducts.map((product, i) => (
