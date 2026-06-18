@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f23",
+    name: "Biquíni Rosê Dourado",
+    slug: "biquini-rose-dourado",
+    description: "Biquíni bandeau rosê acetinado com alças douradas e calcinha de corte alto. Top com bojo embutido e detalhe franzido frontal. Feminino e sofisticado.",
+    price: 409.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-rose-dourado.jpg`, alt: "Biquíni Rosê com detalhes dourados — Boutique Eva Milhomem" }],
+    sizes: ["P", "M"],
+    colors: ["Rosê"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "rosê", "dourado", "bandeau", "praia", "verão"],
+  },
+
+  {
     id: "f22",
     name: "Biquíni Tomara que Caia Verde",
     slug: "biquini-tomara-verde",
