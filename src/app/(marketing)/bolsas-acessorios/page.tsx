@@ -8,13 +8,11 @@ import { getBagsAndAccessories } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Bolsas & Acessórios",
-  description: "Bolsas de couro, clutches, cintos e acessórios premium.",
+  title: "Acessórios",
+  description: "Bonés, cintos, carteiras e acessórios premium.",
 };
 
-const BASE = "https://images.unsplash.com";
-
-export default function BolsasAcessoriosPage() {
+export default function AcessoriosPage() {
   const items = getBagsAndAccessories();
 
   return (
@@ -22,23 +20,23 @@ export default function BolsasAcessoriosPage() {
       {/* Hero duplo */}
       <section className="relative h-[55vh] min-h-[400px] flex items-end overflow-hidden pt-20">
         <Image
-          src={`${BASE}/photo-1584917865442-de89df76afd3?w=1400&h=700&fit=crop`}
-          alt="Bolsas & Acessórios"
+          src={`/products/bone-cinto-carteira.webp`}
+          alt="Acessórios"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/50 to-transparent" />
         <div className="relative z-10 container-boutique pb-14">
           <p className="text-gold text-xs font-semibold uppercase tracking-[0.3em] mb-3">
             Curadoria
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-bold text-off-white leading-tight">
-            Bolsas &<br />Acessórios
+          <h1 className="font-heading text-5xl md:text-6xl font-light text-off-white leading-tight">
+            Acessórios
           </h1>
-          <p className="text-off-white/70 mt-3 text-lg max-w-lg">
-            A peça certa completa o look. Nossa seleção de bolsas e acessórios de luxo.
+          <p className="text-off-white/70 mt-3 text-base max-w-lg">
+            Os detalhes que elevam qualquer look — bonés, cintos, carteiras e muito mais.
           </p>
         </div>
       </section>
@@ -47,7 +45,7 @@ export default function BolsasAcessoriosPage() {
       <section className="border-b border-border bg-off-white">
         <div className="container-boutique py-4">
           <div className="flex items-center gap-6 overflow-x-auto">
-            {["Todos", "Bolsas", "Clutches", "Cintos", "Óculos", "Lenços"].map((f, i) => (
+            {["Todos", "Bonés", "Cintos", "Carteiras", "Chinelos"].map((f, i) => (
               <button
                 key={f}
                 className={`text-xs font-semibold uppercase tracking-widest whitespace-nowrap pb-1 transition-colors ${
@@ -64,7 +62,7 @@ export default function BolsasAcessoriosPage() {
       </section>
 
       {/* Grid */}
-      <section className="section-padding">
+      <section className="section-padding bg-off-white">
         <div className="container-boutique">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12">
             {items.map((product, i) => (
@@ -76,70 +74,25 @@ export default function BolsasAcessoriosPage() {
         </div>
       </section>
 
-      {/* Editorial */}
-      <section className="section-padding gradient-champagne">
-        <div className="container-boutique">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <AnimatedSection direction="left">
-              <SectionHeader
-                eyebrow="It Bags"
-                title="A bolsa que define o look"
-                subtitle="Mais do que um acessório, uma declaração. Nossa coleção de bolsas de couro é um investimento em elegância que dura anos."
-                centered={false}
-              />
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a
-                  href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Tenho interesse em bolsas e acessórios.")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-noir text-off-white font-bold text-xs uppercase tracking-widest px-7 py-4 hover:bg-noir/80 transition-colors"
-                >
-                  Consultar WhatsApp <ArrowRight size={14} />
-                </a>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection direction="right">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={`${BASE}/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop`}
-                    alt="Bolsa Tote"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden mt-6">
-                  <Image
-                    src={`${BASE}/photo-1591561954557-26941169b49e?w=400&h=400&fit=crop`}
-                    alt="Clutch"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden -mt-6">
-                  <Image
-                    src={`${BASE}/photo-1566150905458-1bf1fc113f0d?w=400&h=400&fit=crop`}
-                    alt="Bucket Bag"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={`${BASE}/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop`}
-                    alt="Cinto"
-                    fill
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
+      {/* CTA WhatsApp */}
+      <section className="py-16 bg-noir">
+        <div className="container-boutique text-center">
+          <AnimatedSection>
+            <SectionHeader
+              eyebrow="Atendimento"
+              title="Não encontrou o que procurava?"
+              subtitle="Fale com nossas consultoras e encontre o acessório ideal para o seu estilo."
+              light
+            />
+            <a
+              href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Procuro um acessório específico.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 bg-gold text-noir font-bold text-xs uppercase tracking-widest px-8 py-4 hover:bg-gold-light transition-colors"
+            >
+              Consultar via WhatsApp <ArrowRight size={14} />
+            </a>
+          </AnimatedSection>
         </div>
       </section>
     </>

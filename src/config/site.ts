@@ -23,7 +23,7 @@ export const siteConfig = {
     { label: "Calçados", href: "/calcados-femininos" },
     { label: "Bolsas", href: "/bolsas" },
     { label: "Moda Infantil", href: "/moda-infantil" },
-    { label: "Bolsas & Acessórios", href: "/bolsas-acessorios" },
+    { label: "Acessórios", href: "/bolsas-acessorios" },
     { label: "Campanhas", href: "/campanhas" },
     { label: "Sobre", href: "/sobre" },
     { label: "Contato", href: "/contato" },

@@ -57,29 +57,6 @@ export const products: Product[] = [
   },
 
   {
-    id: "f3",
-    name: "Vestido Feminino Vermelho",
-    slug: "vestido-feminino-vermelho",
-    description:
-      "Vestido feminino vermelho elegante. Perfeito para ocasiões especiais com muito estilo e sofisticação.",
-    price: 0,
-    category: "vestidos",
-    gender: "feminino",
-    images: [
-      {
-        url: `${P}/vestido-feminino-vermelho.jpg`,
-        alt: "Vestido feminino vermelho — Boutique Eva Milhomem",
-      },
-    ],
-    sizes: ["P", "M", "G"],
-    colors: ["Vermelho"],
-    inStock: true,
-    featured: true,
-    isNew: true,
-    tags: ["vestido", "vermelho", "elegante", "festa"],
-  },
-
-  {
     id: "f4",
     name: "Maiô RDSOL",
     slug: "maio-rdsol",
@@ -223,22 +200,27 @@ export const products: Product[] = [
   },
   {
     id: "f10",
-    name: "Colete Alfaiataria Verde",
-    slug: "colete-alfaiataria-verde",
-    description: "Colete alfaiataria premium em verde escuro com botões dourados. Caimento sofisticado, ideal para looks formais e casuais.",
+    name: "Conjunto Alfaiataria Verde",
+    slug: "conjunto-alfaiataria-verde",
+    description: "Colete alfaiataria premium em verde escuro com botões dourados + Calça reta combinando. Escolha a peça ou leve o conjunto completo.",
     price: 349.90,
+    options: [
+      { label: "Só o Colete", price: 349.90 },
+      { label: "Só a Calça", price: 489.90 },
+    ],
     category: "blusas",
     gender: "feminino",
-    images: [{ url: `${P}/conjunto-verde-premium.png`, alt: "Colete Alfaiataria Verde — Boutique Eva Milhomem" }],
+    images: [{ url: `${P}/conjunto-verde-premium.png`, alt: "Conjunto Alfaiataria Verde — Boutique Eva Milhomem" }],
     sizes: ["P", "M", "G"],
     colors: ["Verde"],
     inStock: true,
     featured: true,
     isNew: true,
-    tags: ["colete", "alfaiataria", "verde", "premium", "conjunto"],
+    tags: ["colete", "calça", "alfaiataria", "verde", "premium", "conjunto"],
   },
   {
     id: "f11",
+    groupedUnder: "f10",
     name: "Calça Alfaiataria Verde",
     slug: "calca-alfaiataria-verde",
     description: "Calça alfaiataria premium em verde escuro com corte reto e elegante. Combina perfeitamente com o Colete Alfaiataria Verde.",
@@ -255,10 +237,14 @@ export const products: Product[] = [
   },
   {
     id: "f12",
-    name: "Camisa Branca Casual Sofisticada",
-    slug: "camisa-branca-casual",
-    description: "Camisa branca ampla com botões frontais. O item coringa do guarda-roupa feminino — usa com tudo.",
+    name: "Look Casual: Camisa + Short",
+    slug: "look-casual-camisa-short",
+    description: "Camisa branca ampla com botões frontais + Short jeans cintura alta. O look coringa para qualquer ocasião — escolha a peça ou leve o look completo.",
     price: 439.90,
+    options: [
+      { label: "Só a Camisa", price: 439.90 },
+      { label: "Só o Short", price: 379.90 },
+    ],
     category: "blusas",
     gender: "feminino",
     images: [{ url: `${P}/look-casual-camisa-short.png`, alt: "Camisa Branca Casual — Boutique Eva Milhomem" }],
@@ -271,6 +257,7 @@ export const products: Product[] = [
   },
   {
     id: "f13",
+    groupedUnder: "f12",
     name: "Short Jeans",
     slug: "short-jeans",
     description: "Short jeans cintura alta com barra dobrada. Conforto e estilo para o dia a dia.",
@@ -287,10 +274,14 @@ export const products: Product[] = [
   },
   {
     id: "f14",
-    name: "Blusa Minimal Elegance",
-    slug: "blusa-minimal-elegance",
-    description: "Blusa assimétrica em tecido fluido marrom chocolate. Leveza e sofisticação em cada movimento.",
+    name: "Look Chocolate Minimal",
+    slug: "look-chocolate-minimal",
+    description: "Blusa assimétrica em tecido fluido marrom chocolate + Calça alfaiataria wide leg. Escolha a peça ou leve o look completo.",
     price: 329.90,
+    options: [
+      { label: "Só a Blusa", price: 329.90 },
+      { label: "Só a Calça", price: 399.90 },
+    ],
     category: "blusas",
     gender: "feminino",
     images: [{ url: `${P}/look-chocolate-minimal.jpg`, alt: "Blusa Minimal Elegance marrom — Boutique Eva Milhomem" }],
@@ -303,6 +294,7 @@ export const products: Product[] = [
   },
   {
     id: "f15",
+    groupedUnder: "f14",
     name: "Calça Alfaiataria Premium",
     slug: "calca-alfaiataria-premium",
     description: "Calça alfaiataria wide leg em marrom chocolate. Corte premium com caimento perfeito para todas as silhuetas.",
@@ -319,10 +311,14 @@ export const products: Product[] = [
   },
   {
     id: "f16",
-    name: "Camisa Lisa Cinza",
-    slug: "camisa-lisa-cinza",
-    description: "Top tomara-que-caia em tecido estruturado cinza claro. Elegância minimalista para o dia e a noite.",
+    name: "Look Cinza Elegante",
+    slug: "look-cinza-elegante",
+    description: "Top tomara-que-caia em tecido estruturado cinza + Calça wide leg cinza com alfaiataria impecável. Escolha a peça ou leve o look completo.",
     price: 490.00,
+    options: [
+      { label: "Só a Camisa", price: 490.00 },
+      { label: "Só a Calça", price: 419.00 },
+    ],
     category: "blusas",
     gender: "feminino",
     images: [{ url: `${P}/look-cinza-camisa-wide.png`, alt: "Camisa Lisa Cinza — Boutique Eva Milhomem" }],
@@ -335,6 +331,7 @@ export const products: Product[] = [
   },
   {
     id: "f17",
+    groupedUnder: "f16",
     name: "Calça Wide Cinza",
     slug: "calca-wide-cinza",
     description: "Calça wide leg cinza claro com alfaiataria impecável. A peça que eleva qualquer look ao próximo nível.",
@@ -993,8 +990,8 @@ export function getBolsas() {
 
 export function getBagsAndAccessories() {
   return products.filter((p) =>
-    ["bolsas", "acessórios", "cintos"].includes(p.category) ||
-    p.extraCategories?.some((c) => ["bolsas", "acessórios", "cintos"].includes(c))
+    ["acessórios", "cintos"].includes(p.category) ||
+    p.extraCategories?.some((c) => ["acessórios", "cintos"].includes(c))
   );
 }
 

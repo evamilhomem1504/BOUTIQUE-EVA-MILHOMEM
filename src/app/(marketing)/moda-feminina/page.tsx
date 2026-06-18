@@ -13,8 +13,14 @@ export const metadata: Metadata = {
   description: "Vestidos, blusas, calças e saias com elegância e exclusividade.",
 };
 
-const feminineProducts = products
-  .filter((p) => p.gender === "feminino" && !p.groupedUnder);
+const FEMININE_CATEGORIES = ["vestidos", "blusas", "calças-femininas", "saias"];
+
+const feminineProducts = products.filter(
+  (p) =>
+    p.gender === "feminino" &&
+    !p.groupedUnder &&
+    FEMININE_CATEGORIES.includes(p.category)
+);
 
 export default function ModaFemininaPage() {
   return (
