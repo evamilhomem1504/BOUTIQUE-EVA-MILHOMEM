@@ -39,13 +39,13 @@ export function ShopTheLook({ look, products }: ShopTheLookProps) {
       className="group grid md:grid-cols-2 gap-0 border border-border overflow-hidden"
     >
       {/* Foto do look */}
-      <div className="relative aspect-[3/4] md:aspect-auto overflow-hidden bg-secondary">
+      <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[420px] overflow-hidden bg-secondary">
         <Image
           src={look.image}
           alt={look.name}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-103"
+          className="object-cover object-top transition-transform duration-700 group-hover:scale-103"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-transparent md:hidden" />
       </div>
