@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f20",
+    name: "Biquíni Listrado Halter",
+    slug: "biquini-listrado-halter",
+    description: "Biquíni listrado vinho e off white com top triângulo halter e calcinha com amarração lateral. Charme e leveza para a praia.",
+    price: 259.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-listrado-2.jpg`, alt: "Biquíni Listrado Halter vinho e off white — Boutique Eva Milhomem" }],
+    sizes: ["P"],
+    colors: ["Vinho/Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "listrado", "vinho", "halter", "praia", "verão"],
+  },
+
+  {
     id: "f19",
     name: "Biquíni Listrado",
     slug: "biquini-listrado",
