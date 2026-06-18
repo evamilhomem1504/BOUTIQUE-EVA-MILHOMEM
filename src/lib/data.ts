@@ -79,6 +79,28 @@ export const products: Product[] = [
   },
 
   {
+    id: "f27",
+    name: "Conjunto Saída Listrado Amarelo",
+    slug: "conjunto-saida-listrado-amarelo",
+    description: "Conjunto saída de praia listrado amarelo e branco: camisa oversized manga longa + shorts com elástico. Leve, despojado e cheio de estilo para arrasar no verão.",
+    price: 569.90,
+    options: [
+      { label: "Conjunto Completo", price: 569.90 },
+      { label: "Só a Camisa", price: 329.90 },
+      { label: "Só o Shorts", price: 279.90 },
+    ],
+    category: "saídas-de-praia",
+    gender: "feminino",
+    images: [{ url: `${P}/conjunto-saida-listrado-amarelo.jpg`, alt: "Conjunto Saída Listrado Amarelo — Boutique Eva Milhomem" }],
+    sizes: ["P", "M"],
+    colors: ["Amarelo/Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["conjunto", "saída", "listrado", "amarelo", "camisa", "shorts", "praia", "verão"],
+  },
+
+  {
     id: "f26",
     name: "Maiô Verde Trançado",
     slug: "maio-verde-trancado",
