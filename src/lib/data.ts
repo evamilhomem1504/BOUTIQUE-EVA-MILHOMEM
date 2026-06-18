@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f29",
+    name: "Biquíni Torção Verde",
+    slug: "biquini-torcao-verde",
+    description: "Biquíni verde oliva em tecido trançado texturizado com top de torção frontal e calcinha com amarração lateral. Estilo e sofisticação para a praia.",
+    price: 279.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-torcao-verde.jpg`, alt: "Biquíni Torção Verde Oliva — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Verde Oliva"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "torção", "verde", "trançado", "amarração", "praia", "verão"],
+  },
+
+  {
     id: "f28",
     name: "Maiô Lilás Dourado",
     slug: "maio-lilas-dourado",
