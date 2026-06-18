@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f30",
+    name: "Maiô Ombro Único Off White",
+    slug: "maio-ombro-unico-off-white",
+    description: "Maiô canelado off white ombro único com recorte frontal e argola dourada na cintura. Design assimétrico sofisticado com detalhe cut-out. Elegância e sensualidade para a praia.",
+    price: 459.90,
+    category: "maiôs",
+    gender: "feminino",
+    images: [{ url: `${P}/maio-ombro-unico-off-white.jpg`, alt: "Maiô Ombro Único Off White com argola dourada — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "ombro único", "off white", "canelado", "cut-out", "argola", "praia", "verão"],
+  },
+
+  {
     id: "f29",
     name: "Biquíni Torção Verde",
     slug: "biquini-torcao-verde",
