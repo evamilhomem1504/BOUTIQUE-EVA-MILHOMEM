@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f26",
+    name: "Maiô Verde Trançado",
+    slug: "maio-verde-trancado",
+    description: "Maiô verde oliva em tecido trançado texturizado com decote V e argola dourada frontal. Alças largas e corte clássico com toque contemporâneo.",
+    price: 349.90,
+    category: "maiôs",
+    gender: "feminino",
+    images: [{ url: `${P}/maio-verde-trancado.jpg`, alt: "Maiô Verde Trançado com argola dourada — Boutique Eva Milhomem" }],
+    sizes: ["GG"],
+    colors: ["Verde Oliva"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "verde", "trançado", "texturizado", "argola", "praia", "verão"],
+  },
+
+  {
     id: "f25",
     name: "Trio Saída + Biquíni Off White",
     slug: "trio-saida-biquini-off-white",
