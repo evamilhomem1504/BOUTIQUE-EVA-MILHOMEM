@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f19",
+    name: "Biquíni Listrado",
+    slug: "biquini-listrado",
+    description: "Biquíni listrado vinho e off white com top push-up e calcinha de amarração lateral. Sofisticação e elegância para arrasar na praia.",
+    price: 279.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-listrado.jpg`, alt: "Biquíni Listrado vinho e off white — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G", "GG"],
+    colors: ["Vinho/Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "listrado", "vinho", "praia", "push-up", "verão"],
+  },
+
+  {
     id: "f5",
     name: "Biquíni BanaBana",
     slug: "biquini-banana",
