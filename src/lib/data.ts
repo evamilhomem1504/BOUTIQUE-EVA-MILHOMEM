@@ -163,6 +163,22 @@ export const products: Product[] = [
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
+    id: "f18",
+    name: "Maiô Listrado",
+    slug: "maio-listrado",
+    description: "Maiô ombro único com listras vinho e off white, argola dourada e recorte assimétrico. Elegância e sofisticação para a praia ou piscina.",
+    price: 399.90,
+    category: "maiôs",
+    gender: "feminino",
+    images: [{ url: `${P}/maio-listrado.jpg`, alt: "Maiô Listrado vinho e off white — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Vinho/Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "listrado", "vinho", "praia", "verão", "ombro único"],
+  },
+  {
     id: "f8",
     name: "Vestido Elegância Off White",
     slug: "vestido-elegancia-off-white",
