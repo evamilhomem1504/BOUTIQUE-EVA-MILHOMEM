@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f21",
+    name: "Biquíni Tomara que Caia",
+    slug: "biquini-tomara-que-caia",
+    description: "Biquíni tomara que caia off white canelado com argola dourada central. Sofisticação e elegância para arrasar na praia ou piscina.",
+    price: 329.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-tomara-que-caia.jpg`, alt: "Biquíni Tomara que Caia off white — Boutique Eva Milhomem" }],
+    sizes: ["P"],
+    colors: ["Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "tomara que caia", "off white", "argola", "praia", "verão"],
+  },
+
+  {
     id: "f20",
     name: "Biquíni Listrado Halter",
     slug: "biquini-listrado-halter",
