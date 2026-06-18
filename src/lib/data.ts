@@ -79,6 +79,28 @@ export const products: Product[] = [
   },
 
   {
+    id: "f25",
+    name: "Trio Saída + Biquíni Off White",
+    slug: "trio-saida-biquini-off-white",
+    description: "Conjunto trio: saída midi em renda off white com recorte frontal + biquíni tomara que caia off white com argola dourada. Elegância completa para a praia. Escolha a peça ou leve o conjunto.",
+    price: 699.90,
+    options: [
+      { label: "Conjunto Completo", price: 699.90 },
+      { label: "Só a Saída", price: 449.90 },
+      { label: "Só o Biquíni", price: 329.90 },
+    ],
+    category: "saídas-de-praia",
+    gender: "feminino",
+    images: [{ url: `${P}/trio-saida-biquini-off-white.jpg`, alt: "Trio Saída + Biquíni Off White — Boutique Eva Milhomem" }],
+    sizes: ["M"],
+    colors: ["Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["saída", "biquíni", "conjunto", "trio", "off white", "renda", "praia", "verão"],
+  },
+
+  {
     id: "f24",
     name: "Saia Saída de Praia Rosê",
     slug: "saia-saida-praia-rose",
