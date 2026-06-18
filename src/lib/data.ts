@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f24",
+    name: "Saia Saída de Praia Rosê",
+    slug: "saia-saida-praia-rose",
+    description: "Saia longa saída de praia em cetim rosê com fenda lateral e detalhe franzido na cintura com argola dourada. Elegância do mar à areia.",
+    price: 359.90,
+    category: "saídas-de-praia",
+    gender: "feminino",
+    images: [{ url: `${P}/saia-saida-praia-rose.jpg`, alt: "Saia Saída de Praia Rosê — Boutique Eva Milhomem" }],
+    sizes: ["M", "G"],
+    colors: ["Rosê"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["saia", "saída de praia", "rosê", "cetim", "longa", "praia", "verão"],
+  },
+
+  {
     id: "f23",
     name: "Biquíni Rosê Dourado",
     slug: "biquini-rose-dourado",
