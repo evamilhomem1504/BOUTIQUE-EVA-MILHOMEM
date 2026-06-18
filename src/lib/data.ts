@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f28",
+    name: "Maiô Lilás Dourado",
+    slug: "maio-lilas-dourado",
+    description: "Maiô lilás acetinado com alças finas e argolas douradas. Decote quadrado e corte de alta perna. Delicado e sofisticado para arrasar na praia ou piscina.",
+    price: 359.90,
+    category: "maiôs",
+    gender: "feminino",
+    images: [{ url: `${P}/maio-lilas-dourado.jpg`, alt: "Maiô Lilás com argolas douradas — Boutique Eva Milhomem" }],
+    sizes: ["P", "M"],
+    colors: ["Lilás"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["maiô", "lilás", "dourado", "argola", "praia", "verão"],
+  },
+
+  {
     id: "f27",
     name: "Conjunto Saída Listrado Amarelo",
     slug: "conjunto-saida-listrado-amarelo",
