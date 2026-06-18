@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f32",
+    name: "Vestido Saída Listrado Caramelo",
+    slug: "vestido-saida-listrado-caramelo",
+    description: "Vestido saída de praia longo em tricô listrado off white e caramelo com alça halter. Justo ao corpo com caimento elegante. Do P ao GG.",
+    price: 439.90,
+    category: "saídas-de-praia",
+    gender: "feminino",
+    images: [{ url: `${P}/vestido-saida-listrado-caramelo.jpg`, alt: "Vestido Saída de Praia Listrado Caramelo — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G", "GG"],
+    colors: ["Off White/Caramelo"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["vestido", "saída de praia", "listrado", "caramelo", "tricô", "halter", "praia", "verão"],
+  },
+
+  {
     id: "f31",
     name: "Maiô Chocolate com Bojo",
     slug: "maio-chocolate-bojo",
