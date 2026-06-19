@@ -6,8 +6,9 @@ import {
   Users,
   MapPin,
   Star,
-  ShoppingBag,
   ExternalLink,
+  ShoppingBag,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -15,111 +16,128 @@ export const metadata: Metadata = {
   description: "Sua loja de moda premium em Conceição do Araguaia.",
 };
 
-const LINKS = [
+const SECONDARY_LINKS = [
   {
     label: "Fale com a gente no WhatsApp",
     href: "https://wa.me/5594991703949",
     icon: MessageCircle,
-    primary: true,
+    external: true,
   },
   {
     label: "Grupo VIP Eva Milhomem",
     href: "https://chat.whatsapp.com/CTEVwywfGQACVEyHjZllE4",
     icon: Users,
-    primary: false,
-  },
-  {
-    label: "Ver Catálogo de Produtos",
-    href: "/moda-feminina",
-    icon: ShoppingBag,
-    primary: true,
-    internal: true,
+    external: true,
   },
   {
     label: "Como chegar na loja",
     href: "https://maps.google.com/?q=Av.+Fernanda+Guilhon,+800,+Conceição+do+Araguaia,+PA",
     icon: MapPin,
-    primary: false,
+    external: true,
   },
   {
     label: "Avalie nossa loja no Google",
     href: "https://share.google/b7VPaSJhXkqhcT9cX",
     icon: Star,
-    primary: false,
+    external: true,
   },
   {
     label: "Siga no Instagram",
     href: "https://instagram.com/evamilhomem_",
     icon: ExternalLink,
-    primary: false,
+    external: true,
   },
 ];
 
 export default function LinksPage() {
   return (
-    <main className="min-h-screen bg-[#f5f0eb] flex flex-col items-center justify-start px-5 pt-14 pb-16">
+    <main
+      className="min-h-screen flex flex-col items-center"
+      style={{ background: "linear-gradient(160deg, #f7f3ee 0%, #ede8e0 100%)" }}
+    >
+      {/* Cabeçalho */}
+      <header className="w-full flex flex-col items-center pt-12 pb-8 px-6">
+        <div className="relative w-20 h-20 mb-5">
+          <Image
+            src="/favicon.png"
+            alt="Eva Milhomem"
+            fill
+            className="rounded-full object-cover shadow-lg ring-2 ring-[#c9a84c]/30"
+            priority
+          />
+        </div>
 
-      {/* Logo / Nome */}
-      <div className="flex flex-col items-center mb-8">
-        <Image
-          src="/favicon.png"
-          alt="Eva Milhomem"
-          width={72}
-          height={72}
-          className="rounded-full mb-4 object-cover shadow-md"
-          priority
-        />
-        <h1 className="font-heading font-light text-[2.2rem] text-noir leading-none tracking-tight">
+        <h1
+          className="font-heading font-light text-noir leading-none tracking-tight text-center"
+          style={{ fontSize: "clamp(2rem, 8vw, 2.6rem)" }}
+        >
           Eva Milhomem
         </h1>
-        <p className="text-[13px] text-muted-foreground mt-2 text-center max-w-[260px] leading-snug">
-          Sua loja de moda premium em<br />
-          Conceição do Araguaia 💛
+
+        <p className="mt-2 text-[13px] text-[#7a6f65] text-center max-w-[280px] leading-relaxed">
+          Moda premium em Conceição do Araguaia 💛
         </p>
-        <p className="text-[12px] text-muted-foreground mt-1 text-center max-w-[260px] leading-snug">
-          A elegância que você merece, com o toque que faz a diferença.
-        </p>
-      </div>
 
-      {/* Botões */}
-      <div className="w-full max-w-sm flex flex-col gap-3">
-        {LINKS.map(({ label, href, icon: Icon, primary, internal }) => {
-          const baseClass =
-            "w-full flex items-center gap-3 px-5 py-4 rounded-xl text-[14px] font-semibold tracking-wide transition-all duration-200 active:scale-[0.97] shadow-sm";
-          const colorClass = primary
-            ? "bg-noir text-off-white hover:bg-gold hover:text-noir"
-            : "bg-white text-noir hover:bg-gold hover:text-noir border border-[#e0d8d0]";
+        <div className="mt-4 h-px w-12 bg-[#c9a84c]/50" />
+      </header>
 
-          if (internal) {
-            return (
-              <Link key={label} href={href} className={`${baseClass} ${colorClass}`}>
-                <Icon size={18} className="shrink-0" />
-                <span className="flex-1">{label}</span>
-              </Link>
-            );
-          }
+      {/* Corpo */}
+      <div className="w-full max-w-md px-5 flex flex-col gap-4 pb-14">
 
-          return (
+        {/* CTA principal — Ver Catálogo */}
+        <Link
+          href="/moda-feminina"
+          className="group relative overflow-hidden rounded-2xl bg-noir text-off-white flex flex-col items-center justify-center gap-1 py-8 px-6 shadow-xl hover:shadow-2xl transition-all duration-300 active:scale-[0.98]"
+        >
+          {/* brilho dourado */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#c9a84c]/20 to-transparent pointer-events-none" />
+          <div className="absolute top-3 right-4 opacity-20">
+            <ShoppingBag size={48} strokeWidth={1} />
+          </div>
+
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#c9a84c] font-semibold mb-1">
+            Nova Coleção
+          </span>
+          <span className="font-heading font-light text-2xl leading-tight text-center">
+            Ver Catálogo de Produtos
+          </span>
+          <span className="text-[12px] text-white/60 mt-1">
+            Vestidos, bolsas, moda praia e muito mais
+          </span>
+
+          <span className="mt-4 inline-flex items-center gap-2 bg-[#c9a84c] text-noir text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full group-hover:bg-white transition-colors duration-200">
+            Explorar <ArrowRight size={12} />
+          </span>
+        </Link>
+
+        {/* Links secundários */}
+        <div className="flex flex-col gap-2.5 mt-1">
+          {SECONDARY_LINKS.map(({ label, href, icon: Icon, external }) => (
             <a
               key={label}
               href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${baseClass} ${colorClass}`}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+              className="w-full flex items-center gap-3.5 px-5 py-4 rounded-xl bg-white/80 backdrop-blur-sm text-noir text-[13px] font-semibold tracking-wide border border-white hover:border-[#c9a84c]/40 hover:bg-white hover:shadow-md transition-all duration-200 active:scale-[0.98] shadow-sm"
             >
-              <Icon size={18} className="shrink-0" />
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#f0ebe4]">
+                <Icon size={15} className="text-[#c9a84c]" />
+              </span>
               <span className="flex-1">{label}</span>
-              <ExternalLink size={13} className="shrink-0 opacity-40" />
+              {external && <ExternalLink size={12} className="opacity-30 shrink-0" />}
             </a>
-          );
-        })}
-      </div>
+          ))}
+        </div>
 
-      {/* Rodapé */}
-      <p className="mt-10 text-[11px] text-muted-foreground text-center">
-        Av. Fernanda Guilhon, 800 — Conceição do Araguaia, PA<br />
-        Seg–Sex 08h–18h | Sáb 08h–13h
-      </p>
+        {/* Rodapé */}
+        <div className="mt-4 text-center">
+          <p className="text-[11px] text-[#9e9289] leading-relaxed">
+            Av. Fernanda Guilhon, 800<br />
+            Conceição do Araguaia — PA<br />
+            Seg–Sex 08h–18h · Sáb 08h–13h
+          </p>
+        </div>
+      </div>
     </main>
   );
 }
