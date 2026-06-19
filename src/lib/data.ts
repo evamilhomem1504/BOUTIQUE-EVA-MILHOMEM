@@ -820,6 +820,44 @@ export const products: Product[] = [
 
   // ── BOLSAS ────────────────────────────────────────────────────────────────
   {
+    id: "b9",
+    name: "Bolsa Santa Lolla Caramelo",
+    slug: "bolsa-santa-lolla-caramelo",
+    description: "Bolsa Santa Lolla em couro caramelo com alça de ombro e fecho magnético. Elegante e versátil para o dia a dia.",
+    price: 399.90,
+    category: "bolsas",
+    gender: "feminino",
+    images: [
+      { url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Bolsa Santa Lolla caramelo — Boutique Eva Milhomem" },
+      { url: `${P}/bolsa-rasteira-caramelo-2.jpg`, alt: "Bolsa Santa Lolla caramelo — vista frontal" },
+    ],
+    sizes: ["Único"],
+    colors: ["Caramelo"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bolsa", "santa lolla", "caramelo", "couro"],
+  },
+  {
+    id: "c5f",
+    name: "Rasteira Ana Capri Caramelo",
+    slug: "rasteira-ana-capri-caramelo",
+    description: "Rasteira Ana Capri em couro caramelo com tira fina e solado confortável. Combina perfeitamente com a Bolsa Santa Lolla Caramelo.",
+    price: 139.90,
+    category: "calçados",
+    gender: "feminino",
+    images: [
+      { url: `${P}/bolsa-rasteira-caramelo.jpg`, alt: "Rasteira Ana Capri caramelo — Boutique Eva Milhomem" },
+      { url: `${P}/bolsa-rasteira-caramelo-2.jpg`, alt: "Rasteira Ana Capri caramelo — vista frontal" },
+    ],
+    sizes: ["35", "36", "37", "38", "39"],
+    colors: ["Caramelo"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["rasteira", "ana capri", "caramelo", "sandália"],
+  },
+  {
     id: "b4",
     name: "Bolsa Tote Santa Lolla Nylon Preta",
     slug: "bolsa-tote-santa-lolla-nylon-preta",
@@ -1257,4 +1295,18 @@ export function getCalcadosFemininos() {
 
 export function getFeaturedProducts() {
   return products.filter((p) => p.featured && !p.groupedUnder);
+}
+
+export function getProductBySlug(slug: string) {
+  return products.find((p) => p.slug === slug) ?? null;
+}
+
+export function getAllSlugs() {
+  return products.map((p) => ({ slug: p.slug }));
+}
+
+export function getRelatedProducts(product: { category: ProductCategory; id: string }) {
+  return products
+    .filter((p) => p.category === product.category && p.id !== product.id && !p.groupedUnder)
+    .slice(0, 4);
 }

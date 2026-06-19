@@ -4,11 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShoppingBag, Eye } from "lucide-react";
+import { MessageCircle, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { formatPrice, calculateDiscount } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/types/product";
+import { siteConfig } from "@/config/site";
 
 interface ProductCardProps {
   product: Product;
@@ -26,6 +27,13 @@ export function ProductCard({ product, className }: ProductCardProps) {
   const discount = product.originalPrice
     ? calculateDiscount(product.originalPrice, product.price)
     : null;
+
+  function getWhatsAppLink() {
+    const optLabel = hasOptions ? ` — ${product.options![selectedOption].label}` : "";
+    const priceStr = activePrice > 0 ? ` (R$ ${activePrice.toFixed(2).replace(".", ",")})` : "";
+    const msg = `Olá! Tenho interesse no produto: ${product.name}${optLabel}${priceStr}`;
+    return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+  }
 
   return (
     <motion.div
@@ -67,13 +75,15 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
         {/* Action buttons */}
         <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20 flex gap-2">
-          <button
+          <a
+            href={getWhatsAppLink()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 bg-off-white text-noir text-xs font-semibold tracking-wider uppercase py-2.5 hover:bg-gold transition-colors duration-200"
-            onClick={(e) => e.preventDefault()}
           >
-            <ShoppingBag size={14} />
-            Adicionar
-          </button>
+            <MessageCircle size={14} />
+            Tenho Interesse
+          </a>
           <Link
             href={`/produto/${product.slug}`}
             className="flex items-center justify-center w-10 bg-off-white text-noir hover:bg-gold transition-colors duration-200"
