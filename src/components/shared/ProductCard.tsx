@@ -35,19 +35,21 @@ export function ProductCard({ product, className }: ProductCardProps) {
     return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(msg)}`;
   }
 
+  const productHref = `/produto/${product.slug}`;
+
   return (
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className={cn("group relative flex flex-col", className)}
     >
-      {/* Image container */}
-      <div className="relative overflow-hidden bg-secondary aspect-[3/4] rounded-sm">
+      {/* Imagem — link para o produto (clicável em qualquer dispositivo) */}
+      <Link href={productHref} className="relative block overflow-hidden bg-secondary aspect-[3/4] rounded-sm">
         <Image
           src={product.images[0].url}
           alt={product.images[0].alt}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
@@ -70,37 +72,25 @@ export function ProductCard({ product, className }: ProductCardProps) {
           )}
         </div>
 
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/30 transition-colors duration-300 z-10" />
-
-        {/* Action buttons */}
-        <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20 flex gap-2">
-          <a
-            href={getWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 bg-off-white text-noir text-xs font-semibold tracking-wider uppercase py-2.5 hover:bg-gold transition-colors duration-200"
-          >
-            <MessageCircle size={14} />
-            Tenho Interesse
-          </a>
-          <Link
-            href={`/produto/${product.slug}`}
-            className="flex items-center justify-center w-10 bg-off-white text-noir hover:bg-gold transition-colors duration-200"
-          >
+        {/* Overlay de hover no desktop — botão "Ver produto" */}
+        <div className="absolute inset-0 bg-noir/0 group-hover:bg-noir/30 transition-colors duration-300 z-10 hidden md:block" />
+        <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-20 hidden md:flex gap-2">
+          <span className="flex-1 flex items-center justify-center gap-2 bg-off-white text-noir text-xs font-semibold tracking-wider uppercase py-2.5">
             <Eye size={14} />
-          </Link>
+            Ver produto
+          </span>
         </div>
-      </div>
+      </Link>
 
       {/* Info */}
       <div className="mt-3 flex flex-col gap-1.5">
         <p className="text-[10px] uppercase tracking-widest text-gold font-medium">
-          {product.category.replace("-", " ")}
+          {product.category.replace(/-/g, " ")}
         </p>
+
         <Link
-          href={`/produto/${product.slug}`}
-          className="font-heading text-sm font-semibold text-noir hover:text-gold transition-colors line-clamp-1"
+          href={productHref}
+          className="font-heading text-sm font-semibold text-noir hover:text-gold transition-colors line-clamp-2 leading-snug"
         >
           {product.name}
         </Link>
@@ -125,6 +115,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           </div>
         )}
 
+        {/* Preço */}
         <div className="flex flex-col gap-0.5">
           {activePrice > 0 ? (
             <>
@@ -148,6 +139,18 @@ export function ProductCard({ product, className }: ProductCardProps) {
             </span>
           )}
         </div>
+
+        {/* Botão "Tenho Interesse" — sempre visível em mobile, hover no desktop */}
+        <a
+          href={getWhatsAppLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="mt-2 flex items-center justify-center gap-2 bg-noir text-off-white text-[11px] font-semibold tracking-wider uppercase py-2.5 hover:bg-gold hover:text-noir transition-colors duration-200 md:opacity-0 md:group-hover:opacity-100 md:translate-y-1 md:group-hover:translate-y-0 md:transition-all"
+        >
+          <MessageCircle size={13} />
+          Tenho Interesse
+        </a>
       </div>
     </motion.div>
   );
