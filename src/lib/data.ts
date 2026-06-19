@@ -395,6 +395,27 @@ export const products: Product[] = [
     isNew: true,
     tags: ["calça", "banabana", "zebra", "praia", "verão"],
   },
+  {
+    id: "f-biq-listrado-pb",
+    name: "Biquíni Listrado Preto e Branco",
+    slug: "biquini-listrado-preto-branco",
+    description: "Biquíni listrado preto e branco com top bandeau com bojo e calcinha com babado lateral. Conjunto elegante e moderno para a praia.",
+    price: 279.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-listrado-pb.jpg`,
+        alt: "Biquíni Listrado Preto e Branco — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["G"],
+    colors: ["Preto e Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "listrado", "preto", "branco", "bandeau", "babado", "praia", "verão"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
