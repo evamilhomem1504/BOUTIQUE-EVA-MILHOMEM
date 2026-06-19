@@ -463,6 +463,32 @@ export const products: Product[] = [
     isNew: true,
     tags: ["biquíni", "off-white", "texturizado", "corda", "amarração", "praia", "verão"],
   },
+  {
+    id: "f-conj-vermelho-cropped",
+    name: "Conjunto Vermelho Cropped + Short",
+    slug: "conjunto-vermelho-cropped-short",
+    description: "Conjunto vermelho vibrante com top cropped estilo corsete com alças ajustáveis e short com pregas e botão frontal. Elegante e moderno. Escolha a peça ou leve o conjunto completo.",
+    price: 479.80,
+    options: [
+      { label: "Só o Cropped (P)", price: 229.90 },
+      { label: "Só o Short (P)", price: 249.90 },
+    ],
+    category: "blusas",
+    extraCategories: ["calças-femininas"],
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/conjunto-vermelho-cropped-short.jpg`,
+        alt: "Conjunto Vermelho Cropped e Short — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P"],
+    colors: ["Vermelho"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["conjunto", "cropped", "short", "vermelho", "corsete", "alças", "verão"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
