@@ -48,7 +48,8 @@ export default function LinksPage() {
     <main className="min-h-screen bg-[#0a0a0a] flex flex-col items-center">
 
       {/* Hero — cabeçalho escuro */}
-      <header className="w-full bg-[#0a0a0a] flex flex-col items-center pt-20 pb-14 px-6 border-b border-white/5">
+      {/* pt-20 = altura do nav mobile (h-20). pt-28 no md = nav desktop (h-24) + respiro elegante */}
+      <header className="w-full bg-[#0a0a0a] flex flex-col items-center pt-28 md:pt-36 pb-14 px-6 border-b border-white/5">
 
         {/* Nome em tipografia heading */}
         <h1
