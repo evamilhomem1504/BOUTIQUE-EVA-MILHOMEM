@@ -416,6 +416,32 @@ export const products: Product[] = [
     isNew: true,
     tags: ["biquíni", "listrado", "preto", "branco", "bandeau", "babado", "praia", "verão"],
   },
+  {
+    id: "f-conj-biq-saia-nude",
+    name: "Conjunto Biquíni + Saia Crochê Nude",
+    slug: "conjunto-biquini-saia-nude",
+    description: "Biquíni triangle nude com amarração lateral e saia de crochê branca mini. Conjunto praiano sofisticado e versátil. Escolha a peça ou leve o conjunto completo.",
+    price: 399.80,
+    options: [
+      { label: "Só o Biquíni (M)", price: 239.90 },
+      { label: "Só a Saia (P)", price: 159.90 },
+    ],
+    category: "biquinis",
+    extraCategories: ["saídas-de-praia"],
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/conjunto-biquini-saia-nude.jpg`,
+        alt: "Conjunto Biquíni Nude e Saia Crochê — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M", "P"],
+    colors: ["Nude", "Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "saia", "crochê", "nude", "conjunto", "praia", "verão"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
