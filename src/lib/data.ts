@@ -442,6 +442,27 @@ export const products: Product[] = [
     isNew: true,
     tags: ["biquíni", "saia", "crochê", "nude", "conjunto", "praia", "verão"],
   },
+  {
+    id: "f-biq-off-white-tex",
+    name: "Biquíni Off-White Texturizado",
+    slug: "biquini-off-white-texturizado",
+    description: "Biquíni off-white com textura trabalhada, top triângulo com alças de corda e acabamento prateado, calcinha de amarração lateral. Sofisticado e delicado para a praia.",
+    price: 349.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-off-white-texturizado.jpg`,
+        alt: "Biquíni Off-White Texturizado — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P"],
+    colors: ["Off-White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "off-white", "texturizado", "corda", "amarração", "praia", "verão"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
