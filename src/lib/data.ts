@@ -1,4 +1,4 @@
-import type { Product, Campaign, Look } from "@/types/product";
+import type { Product, Campaign, Look, ProductCategory } from "@/types/product";
 
 // Imagens dos produtos reais
 // Salve cada arquivo em: public/products/<nome-abaixo>.jpg
