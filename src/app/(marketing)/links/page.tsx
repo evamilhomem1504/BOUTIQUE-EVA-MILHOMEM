@@ -48,27 +48,20 @@ export default function LinksPage() {
     <main className="min-h-screen bg-[#0a0a0a] flex flex-col items-center">
 
       {/* Hero — cabeçalho escuro */}
-      <header className="w-full bg-[#0a0a0a] flex flex-col items-center pt-14 pb-10 px-6 border-b border-white/5">
-
-        {/* Ornamento superior */}
-        <div className="flex items-center gap-3 mb-8">
-          <div className="h-px w-10 bg-[#c9a84c]/60" />
-          <div className="w-1 h-1 rounded-full bg-[#c9a84c]/60" />
-          <div className="h-px w-10 bg-[#c9a84c]/60" />
-        </div>
+      <header className="w-full bg-[#0a0a0a] flex flex-col items-center pt-20 pb-14 px-6 border-b border-white/5">
 
         {/* Nome em tipografia heading */}
         <h1
-          className="font-heading font-light text-[#f5f0eb] leading-none tracking-wide text-center"
-          style={{ fontSize: "clamp(2.4rem, 10vw, 3.2rem)" }}
+          className="font-heading font-light text-[#f5f0eb] leading-none text-center"
+          style={{ fontSize: "clamp(2.8rem, 12vw, 4rem)", letterSpacing: "0.06em" }}
         >
           Eva Milhomem
         </h1>
 
         {/* Linha dourada decorativa */}
-        <div className="mt-4 h-px w-16 bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent" />
+        <div className="mt-6 h-px w-20 bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent" />
 
-        <p className="mt-4 text-[13px] text-white/40 text-center max-w-[240px] leading-relaxed tracking-wide uppercase" style={{ letterSpacing: "0.15em" }}>
+        <p className="mt-5 text-[10px] text-white/35 text-center tracking-[0.35em] uppercase">
           Moda Premium · Conceição do Araguaia
         </p>
       </header>
