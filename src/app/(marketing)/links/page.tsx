@@ -33,7 +33,7 @@ const LINKS = [
   },
   {
     label: "Avalie nossa loja no Google",
-    href: "https://share.google/b7VPaSJhXkqhcT9cX",
+    href: "https://www.google.com/search?sca_esv=8712aa7b0522de6e&sxsrf=APpeQnsumQ8sfamjR6lv3-J_DLWQMnHxhw:1781873636749&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_-N4k5t4-gjeZJgKVCSVSIzeKScW1dVjewWnSpqnvPzGw4N41ncEMDYpe_nZlRMqVI_LRvLOV53LgWIP38J40jvVW--AQAr7iipRdrQvP5Q9S7hWwiyjmzwQuAA8JLZXmnZCiS_jdt2EJMVbwsJ6BU1etlfPYl1WlXuGhxBGE19__hPoAg%3D%3D&q=Eva+Milhomem+%E2%80%93+Moda+Feminina,+Roupas+e+Bolsas+em+Concei%C3%A7%C3%A3o+do+Araguaia+Coment%C3%A1rios&sa=X&ved=2ahUKEwjyp5zJrJOVAxVSLrkGHQ7rMsMQ0bkNegQINhAF&biw=1280&bih=607&dpr=1.5",
     icon: Star,
   },
   {
