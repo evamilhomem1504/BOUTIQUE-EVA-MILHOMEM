@@ -763,6 +763,25 @@ export const products: Product[] = [
     isNew: true,
     tags: ["bolsa", "chinelo", "branco", "corrente", "dourado", "matelassê", "elegante"],
   },
+  {
+    id: "c-sandalia-sl-preta",
+    name: "Sandália Santa Lolla Preta Matelassê",
+    slug: "sandalia-santa-lolla-preta",
+    description: "Sandália rasteira Santa Lolla preta em verniz com palmilha matelassê, tira fina e logo TS dourado. Borda dourada e fivela elegante. Do 34 ao 40.",
+    price: 249.90,
+    category: "calçados",
+    gender: "feminino",
+    images: [
+      { url: `${P}/sandalia-santa-lolla-preta-1.jpg`, alt: "Sandália Santa Lolla Preta Matelassê — Boutique Eva Milhomem" },
+      { url: `${P}/sandalia-santa-lolla-preta-2.jpg`, alt: "Sandália Santa Lolla Preta lateral — Boutique Eva Milhomem" },
+    ],
+    sizes: ["34", "35", "36", "37", "38", "39", "40"],
+    colors: ["Preto", "Dourado"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["sandália", "santa lolla", "preta", "matelassê", "rasteira", "dourado", "verniz"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
