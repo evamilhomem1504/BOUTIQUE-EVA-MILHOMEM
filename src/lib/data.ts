@@ -737,6 +737,32 @@ export const products: Product[] = [
     isNew: true,
     tags: ["look", "conjunto", "branco", "xadrez", "cropped", "calça", "bolsa", "salto"],
   },
+  {
+    id: "f-bolsa-chinelo-branco",
+    name: "Bolsa + Chinelo Branco com Corrente",
+    slug: "bolsa-chinelo-branco-corrente",
+    description: "Duo sofisticado: bolsa branca matelassê com corrente dourada e fecho dourado + chinelo branco com corrente. Elegância do início ao fim.",
+    price: 399.90,
+    options: [
+      { label: "Bolsa Branca Matelassê", price: 399.90 },
+      { label: "Chinelo Branco com Corrente", price: 99.90 },
+    ],
+    category: "bolsas",
+    extraCategories: ["calçados"],
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/bolsa-chinelo-branco-corrente.jpg`,
+        alt: "Bolsa e Chinelo Branco com Corrente Dourada — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["Único"],
+    colors: ["Branco", "Dourado"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bolsa", "chinelo", "branco", "corrente", "dourado", "matelassê", "elegante"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
