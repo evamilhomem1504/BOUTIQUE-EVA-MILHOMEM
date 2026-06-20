@@ -903,7 +903,7 @@ export const products: Product[] = [
     price: 349.00,
     category: "calçados",
     gender: "feminino",
-    images: [{ url: `${P}/look-chocolate-minimal.jpg`, alt: "Sandália Branca Santa Lolla — Boutique Eva Milhomem" }],
+    images: [{ url: `${P}/chinelo-santa-lolla-corrente.jpg`, alt: "Sandália Branca Santa Lolla — Boutique Eva Milhomem" }],
     sizes: ["35", "36", "37", "38", "39"],
     colors: ["Branco"],
     inStock: true,
