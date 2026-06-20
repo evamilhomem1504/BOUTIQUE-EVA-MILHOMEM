@@ -632,6 +632,27 @@ export const products: Product[] = [
     isNew: true,
     tags: ["vestido", "uva", "vinho", "gola alta", "cinto", "elegante", "sofisticado"],
   },
+  {
+    id: "c-chinelo-sl-corrente",
+    name: "Chinelo Santa Lolla Corrente Dourada",
+    slug: "chinelo-santa-lolla-corrente",
+    description: "Chinelo Santa Lolla caramelo com alças de corrente dourada e logo IS em dourado. Sofisticado e confortável.",
+    price: 149.00,
+    category: "calçados",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/chinelo-santa-lolla-corrente.jpg`,
+        alt: "Chinelo Santa Lolla Corrente Dourada — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["Único"],
+    colors: ["Caramelo"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["chinelo", "santa lolla", "corrente", "dourado", "caramelo", "calçado"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
