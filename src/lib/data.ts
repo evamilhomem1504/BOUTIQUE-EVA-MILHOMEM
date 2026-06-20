@@ -611,6 +611,27 @@ export const products: Product[] = [
     isNew: true,
     tags: ["biquíni", "laranja", "texturizado", "argola", "bandeau", "praia", "verão"],
   },
+  {
+    id: "f-vestido-uva-cinto",
+    name: "Vestido Uva com Cinto",
+    slug: "vestido-uva-cinto",
+    description: "Vestido uva sofisticado com gola alta, sem manga e cinto na cintura. Caimento impecável e acabamento elegante. Disponível no crediário em até 10x.",
+    price: 0,
+    category: "vestidos",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/vestido-uva-cinto.jpg`,
+        alt: "Vestido Uva com Cinto — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M"],
+    colors: ["Uva"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["vestido", "uva", "vinho", "gola alta", "cinto", "elegante", "sofisticado"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
