@@ -536,6 +536,60 @@ export const products: Product[] = [
     isNew: true,
     tags: ["infantil", "macacão", "piquet", "listrado", "menino", "bebê", "polo"],
   },
+  {
+    id: "km-bodies-1",
+    name: "Bodies e Camisas Infantil Masculino — Coleção 1",
+    slug: "bodies-camisas-infantil-1",
+    description: "Peças infantis masculinas da marca Tigor T. Tigre e outras. Escolha o modelo preferido.",
+    price: 124.90,
+    options: [
+      { label: "Body Tigor T. Tigre (MB)", price: 124.90 },
+      { label: "Body Azul e Branco (MB)", price: 109.90 },
+      { label: "Camisa Cinza TGDR (GB)", price: 49.00 },
+      { label: "Body Branco Homem-Aranha (MB)", price: 79.00 },
+    ],
+    category: "infantil",
+    gender: "infantil-menino",
+    images: [
+      {
+        url: `${P}/infantil-bodies-1.jpg`,
+        alt: "Bodies e Camisas Infantil Masculino — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["MB", "GB"],
+    colors: ["Colorido", "Azul", "Cinza", "Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["infantil", "body", "camisa", "menino", "bebê", "tigor", "homem-aranha"],
+  },
+  {
+    id: "km-bodies-2",
+    name: "Bodies e Camisas Infantil Masculino — Coleção 2",
+    slug: "bodies-camisas-infantil-2",
+    description: "Peças infantis masculinas com estampas divertidas e modelos polo. Escolha o modelo preferido.",
+    price: 159.00,
+    options: [
+      { label: "Body Branco e Azul Bicicletas (PB)", price: 159.00 },
+      { label: "Camisa Polo Vermelha (MM)", price: 99.90 },
+      { label: "Camisa Azul Piscina (GGB)", price: 52.00 },
+      { label: "Camiseta Vermelha Tigorstein (GB)", price: 52.00 },
+    ],
+    category: "infantil",
+    gender: "infantil-menino",
+    images: [
+      {
+        url: `${P}/infantil-bodies-2.jpg`,
+        alt: "Bodies e Camisas Infantil Masculino Coleção 2 — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["PB", "MM", "GGB", "GB"],
+    colors: ["Branco", "Azul", "Vermelho"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["infantil", "body", "camisa", "polo", "menino", "bebê", "tigor", "bicicleta"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
