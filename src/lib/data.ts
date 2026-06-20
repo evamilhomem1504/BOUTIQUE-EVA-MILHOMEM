@@ -783,6 +783,24 @@ export const products: Product[] = [
     isNew: true,
     tags: ["sandália", "santa lolla", "preta", "matelassê", "rasteira", "dourado", "verniz"],
   },
+  {
+    id: "m-polo-vinho",
+    name: "Camisa Polo Vinho Acostamento",
+    slug: "camisa-polo-vinho",
+    description: "Camisa polo vinho marsala com gola listrada branca e vermelha, botões combinando e logo de lobo bordado. Elegante e versátil para o dia a dia.",
+    price: 349.90,
+    category: "camisas",
+    gender: "masculino",
+    images: [
+      { url: `${P}/camisa-polo-vinho.jpg`, alt: "Camisa Polo Vinho Acostamento — Boutique Eva Milhomem" },
+    ],
+    sizes: ["M"],
+    colors: ["Vinho"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["polo", "vinho", "marsala", "camisa", "masculino", "acostamento", "logo"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
