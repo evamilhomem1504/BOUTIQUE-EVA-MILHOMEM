@@ -653,6 +653,33 @@ export const products: Product[] = [
     isNew: true,
     tags: ["chinelo", "santa lolla", "corrente", "dourado", "caramelo", "calçado"],
   },
+  {
+    id: "a-kit-ogochi-acostamento",
+    name: "Boné, Carteira e Sandália — Ogochi & Acostamento",
+    slug: "kit-ogochi-acostamento",
+    description: "Peças masculinas premium da Ogochi e Acostamento. Boné Ogochi all black, Carteira Ogochi em couro preto e Sandália Acostamento preta. Escolha a peça desejada.",
+    price: 99.90,
+    options: [
+      { label: "Boné Ogochi", price: 79.90 },
+      { label: "Carteira Ogochi", price: 99.90 },
+      { label: "Sandália Acostamento (37–43)", price: 79.90 },
+    ],
+    category: "acessórios",
+    extraCategories: ["calçados"],
+    gender: "masculino",
+    images: [
+      {
+        url: `${P}/kit-ogochi-acostamento.jpg`,
+        alt: "Boné Carteira e Sandália Ogochi Acostamento — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["Único", "37", "38", "39", "40", "41", "42", "43"],
+    colors: ["Preto"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["boné", "carteira", "sandália", "ogochi", "acostamento", "masculino", "preto"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
