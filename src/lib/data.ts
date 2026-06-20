@@ -489,6 +489,53 @@ export const products: Product[] = [
     isNew: true,
     tags: ["conjunto", "cropped", "short", "vermelho", "corsete", "alças", "verão"],
   },
+  {
+    id: "km-macacoes-infantil",
+    name: "Macacões Infantil Masculino",
+    slug: "macacoes-infantil-masculino",
+    description: "Macacões infantis masculinos, confortáveis e charmosos. Escolha o modelo preferido — Amarelo com estampa de animais (P), Colorido jardineira (G) ou Azul Marinho (G).",
+    price: 199.90,
+    options: [
+      { label: "Amarelo Animais (P)", price: 199.90 },
+      { label: "Colorido Jardineira (G)", price: 169.90 },
+      { label: "Azul Marinho (G)", price: 179.90 },
+    ],
+    category: "infantil",
+    gender: "infantil-menino",
+    images: [
+      {
+        url: `${P}/infantil-macacoes-1.jpg`,
+        alt: "Macacões Infantil Masculino — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P", "G"],
+    colors: ["Amarelo", "Colorido", "Azul Marinho"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["infantil", "macacão", "menino", "bebê", "animais", "jardineira", "azul"],
+  },
+  {
+    id: "km-macacao-piquet",
+    name: "Macacão Longo Piquet Listrado",
+    slug: "macacao-longo-piquet-listrado",
+    description: "Macacão longo masculino em piquet listrado vermelho, bege e branco. Gola polo, patch de ursinho no peito e fechamento por botões de pressão. Tam. G.",
+    price: 179.90,
+    category: "infantil",
+    gender: "infantil-menino",
+    images: [
+      {
+        url: `${P}/infantil-macacao-piquet.jpg`,
+        alt: "Macacão Longo Piquet Listrado Infantil — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["G"],
+    colors: ["Vermelho", "Bege", "Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["infantil", "macacão", "piquet", "listrado", "menino", "bebê", "polo"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
