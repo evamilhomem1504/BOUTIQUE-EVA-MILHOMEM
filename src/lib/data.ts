@@ -725,6 +725,10 @@ export const products: Product[] = [
         url: `${P}/look-branco-conjunto.jpg`,
         alt: "Look Branco Xadrez Conjunto Completo — Boutique Eva Milhomem",
       },
+      {
+        url: `${P}/look-branco-conjunto-2.jpg`,
+        alt: "Look Branco Xadrez com modelo — Boutique Eva Milhomem",
+      },
     ],
     sizes: ["P"],
     colors: ["Branco", "Caramelo", "Marrom"],
