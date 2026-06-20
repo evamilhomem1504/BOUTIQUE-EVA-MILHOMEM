@@ -774,6 +774,7 @@ export const products: Product[] = [
     images: [
       { url: `${P}/sandalia-santa-lolla-preta-1.jpg`, alt: "Sandália Santa Lolla Preta Matelassê — Boutique Eva Milhomem" },
       { url: `${P}/sandalia-santa-lolla-preta-2.jpg`, alt: "Sandália Santa Lolla Preta lateral — Boutique Eva Milhomem" },
+      { url: `${P}/sandalia-santa-lolla-preta-3.jpg`, alt: "Sandália Santa Lolla Preta sola — Boutique Eva Milhomem" },
     ],
     sizes: ["34", "35", "36", "37", "38", "39", "40"],
     colors: ["Preto", "Dourado"],
