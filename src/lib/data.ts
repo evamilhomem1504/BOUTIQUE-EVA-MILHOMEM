@@ -705,6 +705,34 @@ export const products: Product[] = [
     isNew: true,
     tags: ["infantil", "vestido", "rosa", "tule", "sapatinho", "menina", "bebê", "festa"],
   },
+  {
+    id: "f-look-branco-conjunto",
+    name: "Look Branco Xadrez — Conjunto Completo",
+    slug: "look-branco-conjunto",
+    description: "Look completo com top cropped branco xadrez, calça branca xadrez estilo jogger, bolsa caramelo estruturada e sandália de salto marrom. Escolha a peça ou leve o look completo.",
+    price: 479.90,
+    options: [
+      { label: "Top Cropped Branco (P)", price: 249.90 },
+      { label: "Calça Branca Xadrez (P)", price: 479.90 },
+      { label: "Bolsa Caramelo", price: 499.00 },
+      { label: "Sandália Salto Marrom (P)", price: 379.90 },
+    ],
+    category: "blusas",
+    extraCategories: ["calças-femininas", "bolsas", "calçados"],
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/look-branco-conjunto.jpg`,
+        alt: "Look Branco Xadrez Conjunto Completo — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["P"],
+    colors: ["Branco", "Caramelo", "Marrom"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["look", "conjunto", "branco", "xadrez", "cropped", "calça", "bolsa", "salto"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
