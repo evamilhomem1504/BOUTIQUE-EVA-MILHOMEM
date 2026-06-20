@@ -680,6 +680,31 @@ export const products: Product[] = [
     isNew: true,
     tags: ["boné", "carteira", "sandália", "ogochi", "acostamento", "masculino", "preto"],
   },
+  {
+    id: "ki-vestido-rosa-sapatinho",
+    name: "Vestido Rosa Tule + Sapatinho Dourado",
+    slug: "infantil-vestido-rosa-sapatinho",
+    description: "Vestido infantil feminino em tule rosa com babados e poás, manga borboleta e saia em camadas. Acompanha sapatinho dourado Ortopé. Escolha a peça ou leve o conjunto.",
+    price: 299.90,
+    options: [
+      { label: "Vestido Rosa Tule (M · 4–6 meses)", price: 299.90 },
+      { label: "Sapatinho Dourado Ortopé (Tam. 18)", price: 139.90 },
+    ],
+    category: "infantil",
+    gender: "infantil-menina",
+    images: [
+      {
+        url: `${P}/infantil-vestido-rosa-sapatinho.jpg`,
+        alt: "Vestido Rosa Tule e Sapatinho Dourado Infantil — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M", "18"],
+    colors: ["Rosa", "Dourado"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["infantil", "vestido", "rosa", "tule", "sapatinho", "menina", "bebê", "festa"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
