@@ -590,6 +590,27 @@ export const products: Product[] = [
     isNew: true,
     tags: ["infantil", "body", "camisa", "polo", "menino", "bebê", "tigor", "bicicleta"],
   },
+  {
+    id: "f-biq-laranja-argola",
+    name: "Biquíni Laranja Texturizado com Argola",
+    slug: "biquini-laranja-argola",
+    description: "Biquíni laranja texturizado com top bandeau e argola dourada nas alças. Calcinha cavada. Moderno e sofisticado para a praia.",
+    price: 140.00,
+    category: "biquinis",
+    gender: "feminino",
+    images: [
+      {
+        url: `${P}/biquini-laranja-argola.jpg`,
+        alt: "Biquíni Laranja Texturizado com Argola — Boutique Eva Milhomem",
+      },
+    ],
+    sizes: ["M"],
+    colors: ["Laranja"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "laranja", "texturizado", "argola", "bandeau", "praia", "verão"],
+  },
 
   // ── MODA FEMININA — NOVOS PRODUTOS ────────────────────────────────────────
   {
