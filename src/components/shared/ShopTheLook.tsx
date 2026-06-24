@@ -45,7 +45,7 @@ export function ShopTheLook({ look, products }: ShopTheLookProps) {
           alt={look.name}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover object-top transition-transform duration-700 group-hover:scale-103"
+          className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-transparent md:hidden" />
       </div>
@@ -67,13 +67,14 @@ export function ShopTheLook({ look, products }: ShopTheLookProps) {
           <ul className="space-y-4">
             {products.map((product, i) => (
               <li key={product.id} className="flex items-center gap-4">
-                <div className="relative w-14 h-14 shrink-0 overflow-hidden bg-secondary">
+                <div className="relative w-14 h-14 shrink-0 overflow-hidden bg-off-white border border-border/30">
                   <Image
                     src={product.images[0].url}
                     alt={product.images[0].alt}
                     fill
                     sizes="56px"
-                    className="object-cover"
+                    className="object-contain"
+                    style={{ padding: "4px" }}
                   />
                 </div>
                 <div className="flex-1 min-w-0">
