@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f33",
+    name: "Short Feminino Couro Sintético",
+    slug: "short-feminino-couro-sintetico",
+    description: "Short feminino em couro sintético preto com cintura alta, passantes para cinto e botão frontal. Caimento estruturado e elegante, peça versátil que combina do casual ao sofisticado. Disponível no crediário em até 10x.",
+    price: 319.90,
+    category: "calças-femininas",
+    gender: "feminino",
+    images: [{ url: `${P}/short-feminino-couro-sintetico.jpg`, alt: "Short Feminino Couro Sintético Preto — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Preto"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["short", "couro sintético", "preto", "cintura alta", "feminino"],
+  },
+
+  {
     id: "f32",
     name: "Vestido Saída Listrado Caramelo",
     slug: "vestido-saida-listrado-caramelo",
