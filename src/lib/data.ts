@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f34",
+    name: "Short Feminino Couro FAVLAB Marrom",
+    slug: "short-couro-favlab-marrom",
+    description: "Short feminino FAVLAB em couro marrom com cintura alta, pregas frontais, passantes para cinto e botão. Caimento estruturado e sofisticado, ideal para compor looks elegantes do dia à noite. Disponível no crediário em até 10x.",
+    price: 319.90,
+    category: "calças-femininas",
+    gender: "feminino",
+    images: [{ url: `${P}/short-couro-favlab-marrom.jpg`, alt: "Short Feminino Couro FAVLAB Marrom — Boutique Eva Milhomem" }],
+    sizes: ["P", "M", "G"],
+    colors: ["Marrom"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["short", "couro", "favlab", "marrom", "cintura alta", "feminino"],
+  },
+
+  {
     id: "f33",
     name: "Short Feminino Couro Sintético",
     slug: "short-feminino-couro-sintetico",
