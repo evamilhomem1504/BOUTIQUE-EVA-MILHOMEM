@@ -6,7 +6,7 @@ import { ShopTheLook } from "@/components/shared/ShopTheLook";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { InstagramFeed } from "@/components/shared/InstagramFeed";
-import { getFeaturedProducts, campaigns, looks, getLookProducts } from "@/lib/data";
+import { getFeaturedProducts, getNewProducts, campaigns, looks, getLookProducts } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
 const HERO_IMG = "/products/hero-principal.jpg";
@@ -43,6 +43,7 @@ const categories: Category[] = [
 
 export default function HomePage() {
   const featured = getFeaturedProducts().slice(0, 6);
+  const newProducts = getNewProducts().slice(0, 4);
   const featuredCampaign = campaigns.find((c) => c.featured);
 
   return (
@@ -224,6 +225,39 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── RECÉM CHEGOU ─────────────────────────────────────────── */}
+      {newProducts.length > 0 && (
+        <section className="py-16 md:py-20 bg-noir border-t border-gold/10">
+          <div className="container-boutique">
+            <AnimatedSection className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                  <span className="text-gold text-[10px] font-semibold uppercase tracking-[0.4em]">Novidades</span>
+                </div>
+                <h2 className="font-heading font-light text-3xl md:text-4xl text-off-white leading-tight">
+                  Recém chegou
+                </h2>
+              </div>
+              <Link
+                href="/moda-feminina"
+                className="shrink-0 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40 hover:text-gold transition-colors duration-300 border-b border-white/20 hover:border-gold pb-0.5"
+              >
+                Ver tudo <ArrowRight size={11} />
+              </Link>
+            </AnimatedSection>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-x-6">
+              {newProducts.map((product, i) => (
+                <AnimatedSection key={product.id} delay={i * 0.07}>
+                  <ProductCard product={product} />
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── PEÇAS EM DESTAQUE ────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-off-white">

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Boutique Eva Milhomem",
   shortName: "Eva Milhomem",
   description:
-    "Moda premium com peças exclusivas que celebram a elegância e a individualidade.",
+    "Boutique de moda premium em Conceição do Araguaia, PA. Peças femininas, masculinas, praia e acessórios exclusivos. Atendimento pelo WhatsApp.",
   url: "https://boutiquaevamilhomem.com.br",
   ogImage: "/og-image.jpg",
   links: {
@@ -24,6 +24,7 @@ export const siteConfig = {
     { label: "Bolsas", href: "/bolsas" },
     { label: "Moda Infantil", href: "/moda-infantil" },
     { label: "Acessórios", href: "/bolsas-acessorios" },
+    { label: "Promoções", href: "/promocoes" },
     { label: "Campanhas", href: "/campanhas" },
     { label: "Sobre", href: "/sobre" },
     { label: "Contato", href: "/contato" },

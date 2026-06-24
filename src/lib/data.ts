@@ -1737,6 +1737,10 @@ export function getFeaturedProducts() {
   return products.filter((p) => p.featured && !p.groupedUnder);
 }
 
+export function getNewProducts() {
+  return products.filter((p) => p.isNew && !p.groupedUnder).slice(0, 8);
+}
+
 export function getProductBySlug(slug: string) {
   return products.find((p) => p.slug === slug) ?? null;
 }

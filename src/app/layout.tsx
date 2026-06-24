@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "moda feminina", "moda masculina", "boutique premium", "Eva Milhomem",
-    "roupas exclusivas", "bolsas de luxo", "São Paulo", "Jardins",
+    "roupas exclusivas", "bolsas", "Conceição do Araguaia", "Pará", "moda PA",
+    "loja de roupa Conceição do Araguaia", "moda praia", "biquíni premium",
   ],
   authors: [{ name: siteConfig.name }],
   metadataBase: new URL(siteConfig.url),
