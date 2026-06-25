@@ -7,6 +7,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { InstagramFeed } from "@/components/shared/InstagramFeed";
 import { getFeaturedProducts, getNewProducts, campaigns, looks, getLookProducts } from "@/lib/data";
+import { Testimonials } from "@/components/shared/Testimonials";
 import { siteConfig } from "@/config/site";
 
 const HERO_IMG = "/products/hero-principal.jpg";
@@ -308,6 +309,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── DEPOIMENTOS ──────────────────────────────────────────── */}
+      <Testimonials />
 
       {/* ── CAMPAIGN BANNER ──────────────────────────────────────── */}
       {featuredCampaign && (
