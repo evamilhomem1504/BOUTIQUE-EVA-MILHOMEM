@@ -4,107 +4,102 @@ import Link from "next/link";
 import { ArrowRight, Heart, Award, Users, Gem } from "lucide-react";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Sobre",
-  description: "Conheça a história e os valores da Boutique Eva Milhomem.",
+  title: "Sobre | Boutique Eva Milhomem",
+  description:
+    "Conheça a história da Boutique Eva Milhomem — há mais de 10 anos levando moda premium com curadoria exclusiva para Conceição do Araguaia e todo o Brasil.",
 };
-
-const BASE = "https://images.unsplash.com";
 
 const values = [
   {
     icon: Gem,
     title: "Exclusividade",
-    text: "Cada peça é cuidadosamente selecionada ou desenvolvida em parceria com criadores independentes.",
+    text: "Cada peça é cuidadosamente escolhida por Eva — só entra no catálogo o que tem qualidade, caimento e identidade.",
   },
   {
     icon: Award,
     title: "Qualidade",
-    text: "Apenas materiais nobres e acabamentos de alta costura compõem nosso catálogo.",
+    text: "Trabalhamos com marcas reconhecidas como Santa Lolla, Ogochi, Acostamento e Sauê, porque nossos clientes merecem o melhor.",
   },
   {
     icon: Heart,
     title: "Propósito",
-    text: "Acreditamos que a moda é uma forma de autoexpressão e celebração da individualidade.",
+    text: "Acreditamos que se vestir bem não é vaidade — é respeito por si mesmo. Ajudamos cada cliente a encontrar isso.",
   },
   {
     icon: Users,
     title: "Relacionamento",
-    text: "Mais do que clientes, cultivamos uma comunidade de mulheres e homens que valorizam estilo.",
+    text: "Mais do que vender, criamos vínculos. Nossa consultoria pelo WhatsApp é pessoal, humana e sem pressa.",
   },
-];
-
-const timeline = [
-  { year: "2010", title: "O Começo", text: "Eva Milhomem abre sua primeira loja no Jardins, SP, com uma curadoria de 50 peças." },
-  { year: "2014", title: "Expansão", text: "Lançamento da primeira coleção própria e parceria com estilistas brasileiros." },
-  { year: "2018", title: "Reconhecimento", text: "Prêmio Melhor Boutique do Ano pela Revista Fashion Brasil." },
-  { year: "2022", title: "Digital", text: "Lançamento da presença digital com curadoria online e consultoria virtual." },
-  { year: "2025", title: "Hoje", text: "Referência em moda premium em São Paulo, com atendimento personalizado e exclusivo." },
 ];
 
 export default function SobrePage() {
   return (
     <>
-      {/* Hero */}
+      {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative h-[60vh] min-h-[450px] flex items-end overflow-hidden pt-20">
         <Image
-          src={`${BASE}/photo-1551488831-00ddcb6c6bd3?w=1400&h=700&fit=crop`}
-          alt="Sobre a Boutique Eva Milhomem"
+          src="/products/hero-principal.jpg"
+          alt="Boutique Eva Milhomem"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-top"
+          className="object-cover"
+          style={{ objectPosition: "60% top" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/50 to-transparent" />
         <div className="relative z-10 container-boutique pb-14">
           <p className="text-gold text-xs font-semibold uppercase tracking-[0.3em] mb-3">
             Nossa História
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-bold text-off-white leading-tight">
-            A Arte de<br />Vestir com Alma
+          <h1 className="font-heading text-5xl md:text-6xl font-light text-off-white leading-tight">
+            Moda com alma,<br />nascida no Araguaia
           </h1>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="section-padding">
+      {/* ── HISTÓRIA ─────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28">
         <div className="container-boutique">
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <AnimatedSection direction="left">
               <p className="text-gold text-xs font-semibold uppercase tracking-[0.3em] mb-4">
                 Eva Milhomem
               </p>
-              <h2 className="font-heading text-4xl font-bold text-noir leading-tight mb-6">
-                Uma visão de elegância que transcende tendências
+              <h2 className="font-heading text-4xl font-light text-noir leading-tight mb-6">
+                Há mais de 10 anos vestindo Conceição do Araguaia
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Em 2010, Eva Milhomem transformou sua paixão por moda em uma curadoria única no coração dos Jardins, São Paulo. Com olhar apurado e sensibilidade estética rara, ela reuniu sob o mesmo teto peças que contam histórias.
+                  A Boutique Eva Milhomem nasceu de uma convicção simples: as mulheres e os homens de Conceição do Araguaia merecem ter acesso a moda de verdade — com qualidade, curadoria e atendimento de boutique.
                 </p>
                 <p>
-                  A boutique nasceu da convicção de que moda é muito mais do que roupa: é linguagem, é expressão, é poder. Cada peça é escolhida não apenas pelo design, mas pela emoção que desperta em quem a veste.
+                  Desde o início, Eva construiu a boutique com suas próprias mãos, escolhendo cada peça com cuidado e conhecendo pelo nome cada cliente que entrava pela porta. Esse jeito pessoal de atender nunca mudou.
                 </p>
                 <p>
-                  Quinze anos depois, a Boutique Eva Milhomem é referência em São Paulo para quem busca sofisticação sem abrir mão da personalidade.
+                  Hoje, com mais de uma década de história, a boutique leva moda premium para Conceição e para todo o Brasil — pelo WhatsApp, pelo site, e com o mesmo carinho de sempre.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection direction="right">
               <div className="relative">
-                <div className="relative aspect-[4/5] overflow-hidden">
+                {/* Placeholder para foto da Eva ou da loja — substituir depois */}
+                <div className="relative aspect-[4/5] overflow-hidden bg-noir-soft">
                   <Image
-                    src={`${BASE}/photo-1469334031218-e382a71b716b?w=600&h=750&fit=crop`}
-                    alt="Eva Milhomem"
+                    src="/products/capa-feminina.jpg"
+                    alt="Boutique Eva Milhomem — Conceição do Araguaia"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
+                    style={{ objectPosition: "center 20%" }}
                   />
                 </div>
                 <div className="absolute -bottom-5 -left-5 bg-gold px-6 py-4">
-                  <p className="font-heading text-3xl font-bold text-noir">15</p>
-                  <p className="text-noir/70 text-xs uppercase tracking-widest font-semibold">Anos de elegância</p>
+                  <p className="font-heading text-3xl font-bold text-noir">+10</p>
+                  <p className="text-noir/70 text-xs uppercase tracking-widest font-semibold">Anos de história</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -112,14 +107,38 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Valores */}
-      <section className="section-padding bg-off-white">
+      {/* ── MISSÃO ───────────────────────────────────────────────── */}
+      <section className="bg-noir py-20 md:py-28">
+        <div className="container-boutique">
+          <div className="max-w-3xl mx-auto text-center">
+            <AnimatedSection>
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <div className="h-px w-12 bg-gold/30" />
+                <span className="text-gold text-xs font-semibold uppercase tracking-[0.3em]">Nossa missão</span>
+                <div className="h-px w-12 bg-gold/30" />
+              </div>
+              <blockquote
+                className="font-heading font-light text-off-white leading-snug"
+                style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
+              >
+                "Ajudar cada pessoa a se ver bonita, a se sentir confiante e a sair de casa sabendo que está do seu jeito."
+              </blockquote>
+              <p className="text-white/40 font-sans text-sm mt-6 uppercase tracking-widest">
+                Eva Milhomem — fundadora
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── VALORES ──────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-off-white">
         <div className="container-boutique">
           <AnimatedSection>
             <SectionHeader
               eyebrow="Nossos Pilares"
               title="O que nos define"
-              subtitle="Os valores que guiam cada escolha, cada peça e cada relacionamento na Boutique Eva Milhomem."
+              subtitle="Os valores que guiam cada escolha, cada peça e cada atendimento da Boutique Eva Milhomem."
             />
           </AnimatedSection>
 
@@ -132,7 +151,7 @@ export default function SobrePage() {
                     <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors">
                       <Icon size={18} className="text-gold" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-noir mb-2">{v.title}</h3>
+                    <h3 className="font-heading text-lg font-semibold text-noir mb-2">{v.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{v.text}</p>
                   </div>
                 </AnimatedSection>
@@ -142,67 +161,59 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="section-padding bg-noir">
+      {/* ── MARCAS ───────────────────────────────────────────────── */}
+      <section className="py-16 border-t border-gold/10 bg-off-white">
         <div className="container-boutique">
           <AnimatedSection>
-            <SectionHeader
-              eyebrow="Trajetória"
-              title="Nossa jornada"
-              light
-            />
-          </AnimatedSection>
-
-          <div className="relative mt-14">
-            <div className="absolute left-[52px] md:left-1/2 top-0 bottom-0 w-px bg-white/10" />
-            <div className="space-y-10">
-              {timeline.map((item, i) => (
-                <AnimatedSection key={item.year} delay={i * 0.1}>
-                  <div className={`flex gap-6 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                    <div className={`flex-1 ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"} md:${i % 2 !== 0 ? "" : "flex justify-end"}`}>
-                      <div className="hidden md:block">
-                        <p className="text-gold font-heading text-3xl font-bold mb-1">{item.year}</p>
-                        <h4 className="text-off-white font-heading text-lg font-bold mb-2">{item.title}</h4>
-                        <p className="text-white/60 text-sm leading-relaxed max-w-xs">{item.text}</p>
-                      </div>
-                    </div>
-                    <div className="relative flex items-start">
-                      <div className="w-5 h-5 rounded-full bg-gold border-2 border-noir shrink-0 mt-1 z-10 md:absolute md:left-1/2 md:-translate-x-1/2" />
-                    </div>
-                    <div className="flex-1 md:hidden pl-4">
-                      <p className="text-gold font-heading text-2xl font-bold mb-1">{item.year}</p>
-                      <h4 className="text-off-white font-heading font-bold mb-1">{item.title}</h4>
-                      <p className="text-white/60 text-sm leading-relaxed">{item.text}</p>
-                    </div>
-                    <div className="flex-1 hidden md:block" />
-                  </div>
-                </AnimatedSection>
+            <p className="text-center text-[10px] uppercase tracking-[0.4em] text-muted-foreground mb-10">
+              Marcas que você encontra aqui
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12">
+              {["Santa Lolla", "Ogochi", "Acostamento", "Sauê", "RDSOL", "FAVLAB", "BanaBana", "Tigor T. Tigre"].map((brand) => (
+                <span
+                  key={brand}
+                  className="font-heading text-base font-light text-noir/40 hover:text-gold transition-colors duration-300 uppercase tracking-widest"
+                >
+                  {brand}
+                </span>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 gradient-champagne">
+      {/* ── CTA ──────────────────────────────────────────────────── */}
+      <section className="bg-noir py-24">
         <div className="container-boutique text-center">
           <AnimatedSection>
-            <h2 className="font-heading text-4xl font-bold text-noir mb-4">
-              Venha nos visitar
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-12 bg-gold/30" />
+              <span className="text-gold text-xs font-semibold uppercase tracking-[0.3em]">Vem conhecer</span>
+              <div className="h-px w-12 bg-gold/30" />
+            </div>
+            <h2
+              className="font-heading font-light text-off-white leading-tight mb-4"
+              style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+            >
+              Estamos em Conceição do Araguaia<br />
+              <span className="italic text-gradient-gold">e entregamos para todo o Brasil</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 max-w-md mx-auto">
-              Nossa boutique está te esperando no coração dos Jardins. Agende uma visita personalizada.
+            <p className="text-white/40 font-sans text-base max-w-sm mx-auto mt-4 mb-10 leading-relaxed">
+              Av. Fernanda Guilhon, 800 — Conceição do Araguaia, PA<br />
+              Seg–Sex 08h–18h | Sáb 08h–13h
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contato"
-                className="inline-flex items-center gap-2 bg-noir text-off-white font-bold text-xs uppercase tracking-widest px-8 py-4 hover:bg-noir/80 transition-colors"
+              <a
+                href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Quero conhecer a boutique.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
               >
-                Como Chegar <ArrowRight size={14} />
-              </Link>
+                Falar pelo WhatsApp <ArrowRight size={13} />
+              </a>
               <Link
                 href="/moda-feminina"
-                className="inline-flex items-center gap-2 border border-noir text-noir font-bold text-xs uppercase tracking-widest px-8 py-4 hover:bg-noir hover:text-off-white transition-colors"
+                className="inline-flex items-center justify-center gap-3 border border-white/20 text-white/60 font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-4 hover:border-gold hover:text-gold transition-all duration-300"
               >
                 Ver Coleções
               </Link>
