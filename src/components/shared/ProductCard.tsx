@@ -44,13 +44,14 @@ export function ProductCard({ product, className }: ProductCardProps) {
       className={cn("group relative flex flex-col", className)}
     >
       {/* Imagem — link para o produto (clicável em qualquer dispositivo) */}
-      <Link href={productHref} className="relative block overflow-hidden bg-secondary aspect-[3/4] rounded-sm">
+      <Link href={productHref} className="relative block overflow-hidden bg-off-white aspect-[3/4]">
         <Image
           src={product.images[0].url}
           alt={product.images[0].alt}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-contain transition-transform duration-500 group-hover:scale-[1.04]"
+          style={{ padding: "10px" }}
         />
 
         {/* Badges */}
@@ -149,7 +150,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           className="mt-2 flex items-center justify-center gap-2 bg-noir text-off-white text-[11px] font-semibold tracking-wider uppercase py-2.5 hover:bg-gold hover:text-noir transition-colors duration-200 md:opacity-0 md:group-hover:opacity-100 md:translate-y-1 md:group-hover:translate-y-0 md:transition-all"
         >
           <MessageCircle size={13} />
-          Tenho Interesse
+          Quero essa peça
         </a>
       </div>
     </motion.div>

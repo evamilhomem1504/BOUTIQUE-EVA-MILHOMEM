@@ -17,27 +17,27 @@ const categories: Category[] = [
     label: "Moda Feminina",
     href: "/moda-feminina",
     image: "/products/capa-feminina.jpg",
-    description: "Peças que celebram a feminilidade",
+    description: "Do casual ao sofisticado — peças para cada versão sua",
     objectPosition: "center 20%",
   },
   {
     label: "Moda Masculina",
     href: "/moda-masculina",
     image: `/products/polo-masculina.png`,
-    description: "Estilo e sofisticação masculina",
+    description: "Looks que transmitem presença — do dia a dia ao evento especial",
   },
   {
     label: "Moda Praia",
     href: "/moda-praia",
     image: "/products/capa-modapraia.jpg",
-    description: "Verão com elegância",
+    description: "Brilhe na praia — maiôs, biquínis e saídas que encantam",
     objectPosition: "center 30%",
   },
   {
     label: "Acessórios",
     href: "/bolsas-acessorios",
     image: `/products/bone-cinto-carteira.webp`,
-    description: "Detalhes que fazem a diferença",
+    description: "O acessório certo transforma qualquer look",
   },
 ];
 
@@ -85,13 +85,13 @@ export default function HomePage() {
               className="font-heading font-light text-off-white leading-[0.88] tracking-tight mb-8"
               style={{ fontSize: "clamp(3.4rem, 5.5vw, 7rem)" }}
             >
-              Elegância
-              <span className="block italic text-gradient-gold">que conta</span>
-              histórias.
+              Você merece
+              <span className="block italic text-gradient-gold">se vestir como</span>
+              se sente.
             </h1>
 
             <p className="text-white/45 font-sans text-base max-w-xs mb-12 leading-relaxed">
-              Moda premium com peças exclusivas para quem valoriza sofisticação e individualidade.
+              Curadoria exclusiva de moda feminina, masculina e praia — entrega para todo o Brasil e atendimento personalizado via WhatsApp.
             </p>
 
             <div className="flex flex-row items-center gap-4">
@@ -99,7 +99,7 @@ export default function HomePage() {
                 href="/moda-feminina"
                 className="inline-flex items-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-4 hover:bg-gold-light transition-colors duration-300"
               >
-                Explorar Coleção <ArrowRight size={13} />
+                Ver Novas Chegadas <ArrowRight size={13} />
               </Link>
               <Link
                 href="/moda-praia"
@@ -139,16 +139,16 @@ export default function HomePage() {
             </div>
             <h1 className="font-heading font-light text-off-white leading-[0.9] tracking-tight mb-6"
               style={{ fontSize: "clamp(2.8rem, 11vw, 5rem)" }}>
-              Elegância
-              <span className="block italic text-gradient-gold">que conta</span>
-              histórias.
+              Você merece
+              <span className="block italic text-gradient-gold">se vestir como</span>
+              se sente.
             </h1>
             <div className="flex flex-col gap-3">
               <Link
                 href="/moda-feminina"
                 className="inline-flex items-center justify-center gap-3 bg-gold text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-8 py-4 hover:bg-gold-light transition-colors duration-300"
               >
-                Explorar Coleção <ArrowRight size={13} />
+                Ver Novas Chegadas <ArrowRight size={13} />
               </Link>
               <Link
                 href="/moda-praia"
@@ -166,7 +166,7 @@ export default function HomePage() {
       <section className="bg-noir border-t border-white/5 border-b border-gold/10 py-5">
         <div className="container-boutique">
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-16">
-            {["Curadoria exclusiva", "Marcas premium", "Atendimento personalizado", "Conceição do Araguaia — PA"].map((item, i) => (
+            {["Curadoria exclusiva", "Marcas premium", "Enviamos para todo o Brasil", "Atendimento personalizado", "Conceição do Araguaia — PA"].map((item, i) => (
               <span key={i} className="text-white/30 text-[10px] uppercase tracking-[0.3em] font-sans">
                 {item}
               </span>
@@ -293,8 +293,8 @@ export default function HomePage() {
           <AnimatedSection>
             <SectionHeader
               eyebrow="Shop the Look"
-              title="Monte o look completo"
-              subtitle="Escolha um look e fale direto com a gente pelo WhatsApp."
+              title="Já montamos o look pra você"
+              subtitle="Combinações selecionadas pela nossa equipe — clique em qualquer peça ou chame no WhatsApp para garantir o look completo."
               light
             />
           </AnimatedSection>
@@ -361,11 +361,11 @@ export default function HomePage() {
             </div>
             <h2 className="font-heading font-light text-off-white mb-5 leading-tight"
               style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}>
-              Precisa de ajuda para<br />
+              Não sabe qual peça<br />
               <span className="italic text-gradient-gold">escolher?</span>
             </h2>
-            <p className="text-white/40 font-sans text-base max-w-xs mx-auto mb-10 leading-relaxed">
-              Nossa equipe está pronta para te atender com exclusividade.
+            <p className="text-white/40 font-sans text-base max-w-sm mx-auto mb-10 leading-relaxed">
+              Nossa consultora te atende pelo WhatsApp, sugere o look certo pro seu estilo e monta combinações pra você. Atendimento humano, sem robô.
             </p>
             <a
               href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de uma consultoria de moda personalizada.")}`}
@@ -373,7 +373,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 border border-gold/50 text-gold hover:bg-gold hover:text-noir font-sans font-semibold text-[11px] uppercase tracking-[0.2em] px-10 py-5 transition-all duration-300"
             >
-              Falar com Consultora <ArrowRight size={13} />
+              Chamar no WhatsApp agora <ArrowRight size={13} />
             </a>
           </AnimatedSection>
         </div>
