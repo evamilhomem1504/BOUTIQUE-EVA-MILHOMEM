@@ -23,7 +23,7 @@ const BASE = "https://images.unsplash.com";
 const faqs = [
   {
     q: "Qual o prazo de entrega?",
-    a: "Entregamos em até 5 dias úteis para São Paulo e até 10 dias para demais regiões. Também oferecemos retirada na loja.",
+    a: "Entregamos para todo o Brasil. O prazo varia conforme a região — em média de 5 a 10 dias úteis. Também é possível retirar na loja em Conceição do Araguaia, PA.",
   },
   {
     q: "Como funciona a política de troca?",
@@ -302,7 +302,7 @@ export default function ContatoPage() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center bg-off-white/90 px-4 py-3">
                     <MapPin size={20} className="text-gold mx-auto mb-1" />
-                    <p className="text-xs font-semibold text-noir">Jardins, São Paulo</p>
+                    <p className="text-xs font-semibold text-noir">Conceição do Araguaia, PA</p>
                   </div>
                 </div>
               </div>
