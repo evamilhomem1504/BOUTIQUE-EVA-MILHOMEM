@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f35",
+    name: "Saída Sauê",
+    slug: "saida-saue-preta",
+    description: "Conjunto Sauê em cetim preto: top corselet com bojo, alças reguláveis e detalhe dourado + saia longa drapeada com fenda e caimento sereia. Sofisticação e sensualidade para ocasiões especiais. Tamanho P.",
+    price: 354.25,
+    category: "saídas-de-praia",
+    gender: "feminino",
+    images: [{ url: `${P}/saida-saue-preta.jpg`, alt: "Saída Sauê — conjunto cetim preto top e saia drapeada — Boutique Eva Milhomem" }],
+    sizes: ["P"],
+    colors: ["Preto"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["saída", "sauê", "conjunto", "cetim", "preto", "saia", "top", "festa"],
+  },
+
+  {
     id: "f34",
     name: "Short Feminino Couro FAVLAB Marrom",
     slug: "short-couro-favlab-marrom",
