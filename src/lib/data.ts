@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f36",
+    name: "Bata Ombro Só Laranja",
+    slug: "bata-ombro-so-laranja",
+    description: "Bata feminina laranja ombro só, com uma manga bufante e caimento solto em A. Cor vibrante e marcante, peça versátil que valoriza a silhueta do casual ao social. Tamanho único. Disponível no crediário em até 10x.",
+    price: 399.90,
+    category: "blusas",
+    gender: "feminino",
+    images: [{ url: `${P}/bata-ombro-so-laranja.jpg`, alt: "Bata Ombro Só Laranja — Boutique Eva Milhomem" }],
+    sizes: ["Único"],
+    colors: ["Laranja"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["bata", "ombro só", "laranja", "manga bufante", "blusa", "feminino"],
+  },
+
+  {
     id: "f35",
     name: "Saída Sauê",
     slug: "saida-saue-preta",
