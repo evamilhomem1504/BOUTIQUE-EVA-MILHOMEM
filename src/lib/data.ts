@@ -79,6 +79,22 @@ export const products: Product[] = [
   },
 
   {
+    id: "f40",
+    name: "Biquíni Tomara que Caia BanaBana Verde",
+    slug: "biquini-tomara-que-caia-banabana-verde",
+    description: "Biquíni Bana Bana tomara que caia com estampa de folhagem verde e off white, bojo, argola dourada e amarração no centro. Calcinha cavada de lateral fina. Frescor e elegância para a praia ou piscina. Tamanho P. Disponível no crediário em até 10x.",
+    price: 289.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-tomara-que-caia-banabana-verde.jpg`, alt: "Biquíni Tomara que Caia BanaBana verde folhagem — Boutique Eva Milhomem" }],
+    sizes: ["P"],
+    colors: ["Verde/Off White"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "tomara que caia", "bana bana", "verde", "folhagem", "estampado", "praia", "verão"],
+  },
+  {
     id: "f38",
     name: "Maiô Estampado BanaBana",
     slug: "maio-estampado-banabana",
