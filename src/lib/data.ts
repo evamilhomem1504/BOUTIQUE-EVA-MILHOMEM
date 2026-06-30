@@ -79,6 +79,23 @@ export const products: Product[] = [
   },
 
   {
+    id: "f37",
+    name: "Biquíni Tomara que Caia BanaBana",
+    slug: "biquini-tomara-que-caia-banabana",
+    description: "Biquíni Bana Bana tomara que caia listrado preto e branco, com bojo, argola dourada no centro e calcinha de lateral fixa. Estilo atemporal e sofisticado para a praia ou piscina. Tamanho G. Disponível no crediário em até 10x.",
+    price: 279.90,
+    category: "biquinis",
+    gender: "feminino",
+    images: [{ url: `${P}/biquini-tomara-que-caia-banabana.jpg`, alt: "Biquíni Tomara que Caia BanaBana listrado preto e branco — Boutique Eva Milhomem" }],
+    sizes: ["G"],
+    colors: ["Preto/Branco"],
+    inStock: true,
+    featured: true,
+    isNew: true,
+    tags: ["biquíni", "tomara que caia", "bana bana", "listrado", "preto e branco", "praia", "verão"],
+  },
+
+  {
     id: "f36",
     name: "Bata Ombro Só Laranja",
     slug: "bata-ombro-so-laranja",
